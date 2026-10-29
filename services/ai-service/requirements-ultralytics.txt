@@ -1,0 +1,3 @@
+# Optional inference backend. AGPL-3.0 / enterprise licence: read docs/AI_SERVICE.md first.
+-r requirements.txt
+ultralytics>=8.3

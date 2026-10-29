@@ -1,0 +1,21 @@
+{
+  "name": "laporjalan",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "mobile": "npm run start -w apps/mobile",
+    "admin": "npm run dev -w apps/admin-web",
+    "build:android": "cd apps/mobile && npx eas-cli@latest build --platform android --profile preview",
+    "build:android:production": "cd apps/mobile && npx eas-cli@latest build --platform android --profile production",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "expo-router": "~58.0.28"
+  }
+}
