@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "LaporJalan",
+    "slug": "laporjalan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "LaporJalan memerlukan kamera untuk memotret kerusakan jalan.",
+          "photosPermission": "LaporJalan memerlukan akses galeri untuk memilih foto kerusakan jalan."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "LaporJalan memerlukan lokasi untuk menandai lokasi kerusakan jalan."
+        }
+      ],
+      "expo-font"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.laporjalan.app"
+    },
+    "android": {
+      "package": "com.laporjalan.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#01604F",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8d9c4f04-f4d1-43f9-9a07-0b85d8b5208c"
+      }
+    },
+    "owner": "nusaaplikasis-team"
+  }
+}
