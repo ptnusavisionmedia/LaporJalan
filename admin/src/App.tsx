@@ -74,7 +74,7 @@ export default function App() {
     <div className="shell">
       <aside className="sidebar">
         <div className="brand">
-          <Logo size={32} light /> LaporJalan
+          <Logo size={40} light /> LaporJalan
         </div>
         <div className="who">{scopeText}</div>
         {nav.map(([key, label, icon]) => (

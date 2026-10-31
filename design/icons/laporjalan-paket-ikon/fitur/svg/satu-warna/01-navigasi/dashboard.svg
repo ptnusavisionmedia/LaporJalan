@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-dashboard-mono"><title id="title-dashboard-mono">Dashboard</title><rect x="4" y="4" width="10" height="14" rx="2" fill="currentColor" fill-opacity="0.08"/><rect x="18" y="4" width="10" height="8" rx="2" fill="currentColor" stroke="currentColor"/><rect x="18" y="16" width="10" height="12" rx="2" fill="currentColor" fill-opacity="0.08"/><rect x="4" y="22" width="10" height="6" rx="2" fill="currentColor" fill-opacity="0.08"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-dashboard-mono"><title id="title-dashboard-mono">Dashboard</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="inherit">
+    <defs><mask id="custom-dashboard-mono-3-cut"><rect width="128" height="128" fill="white"/><circle cx="58" cy="48" r="27" fill="black"/><circle cx="99" cy="97" r="22" fill="black"/><path d="M49 88L58 96L67 88" fill="none" stroke="black" stroke-width="2.5"/></mask></defs><path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="currentColor" stroke="currentColor" stroke-width="2.5" mask="url(#custom-dashboard-mono-3-cut)"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="currentColor" stroke-opacity=".3" stroke-width="3"/>
+    
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="10" height="14" rx="2" fill="currentColor" fill-opacity="0.12"/><rect x="18" y="4" width="10" height="8" rx="2" fill="currentColor" stroke="currentColor"/><rect x="18" y="16" width="10" height="12" rx="2" fill="currentColor" fill-opacity="0.12"/><rect x="4" y="22" width="10" height="6" rx="2" fill="currentColor" fill-opacity="0.12"/></g>
+    
+    
+    <circle cx="99" cy="97" r="18.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M91 104V96m8 8V88m8 16V93" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>

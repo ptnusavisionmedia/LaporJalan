@@ -75,7 +75,7 @@ function AuthForm({ mode, onSwitch }: { mode: 'login' | 'register'; onSwitch: ()
 
             <Text style={styles.label}>Username</Text>
             <View style={styles.inputRow}>
-              <Icon name="profil" size={20} color={colors.muted} />
+              <Icon name="profil" size={31} />
               <TextInput
                 style={styles.input}
                 value={username}
@@ -89,7 +89,7 @@ function AuthForm({ mode, onSwitch }: { mode: 'login' | 'register'; onSwitch: ()
 
             <Text style={styles.label}>Password</Text>
             <View style={styles.inputRow}>
-              <Icon name="password" size={20} color={colors.muted} />
+              <Icon name="password" size={31} />
               <TextInput
                 style={styles.input}
                 value={password}
@@ -105,7 +105,7 @@ function AuthForm({ mode, onSwitch }: { mode: 'login' | 'register'; onSwitch: ()
               <>
                 <Text style={styles.label}>Ulangi password</Text>
                 <View style={styles.inputRow}>
-                  <Icon name="password" size={20} color={colors.muted} />
+                  <Icon name="password" size={31} />
                   <TextInput
                     style={styles.input}
                     value={confirm}

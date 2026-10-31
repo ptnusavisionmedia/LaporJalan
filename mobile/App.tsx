@@ -1,15 +1,16 @@
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer, type Theme } from '@react-navigation/native';
+import { PlatformPressable } from '@react-navigation/elements';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Icon, type IconName } from './src/components/Icon';
+import { Icon, Logo, type IconName } from './src/components/Icon';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AuthProvider, useAuth } from './src/lib/auth';
 import { colors, fonts } from './src/lib/theme';
 import { useFonts, BarlowSemiCondensed_600SemiBold, BarlowSemiCondensed_700Bold } from '@expo-google-fonts/barlow-semi-condensed';
 import { LoginScreen, RegisterScreen } from './src/screens/AuthScreens';
-import { FeedScreen } from './src/screens/FeedScreen';
+import { FeedScreen, ReportsDoneScreen } from './src/screens/FeedScreen';
 import { CreateReportScreen } from './src/screens/CreateReportScreen';
 import { ProfileScreen } from './src/screens/ProfileScreen';
 import { ReportDetailScreen } from './src/screens/ReportDetailScreen';
@@ -20,14 +21,16 @@ import { ProximityBanner } from './src/lib/proximity';
 type RootParams = {
   Tabs: undefined;
   ReportDetail: { id: string };
+  ReportsDone: undefined;
   Login: undefined;
   Register: undefined;
 };
 
-const styles = StyleSheet.create({
-  tab: { paddingHorizontal: 16, paddingVertical: 3, borderRadius: 999 },
-  tabActive: { paddingHorizontal: 16, paddingVertical: 3, borderRadius: 999, backgroundColor: colors.primarySoft },
-});
+// Latar semua layar dibuat sama dengan warna aplikasi, supaya tidak ada kilatan hitam saat berpindah halaman.
+const navTheme: Theme = {
+  ...DefaultTheme,
+  colors: { ...DefaultTheme.colors, background: colors.bg, card: colors.bg, primary: colors.primary, text: colors.ink, border: colors.line },
+};
 
 const headerStyle = { backgroundColor: colors.primary, elevation: 0, shadowOpacity: 0 } as const;
 const headerTitleStyle = { fontFamily: fonts.displayBold, fontSize: 24 } as const;
@@ -51,23 +54,29 @@ function Tabs() {
       screenOptions={({ route }) => ({
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.muted,
+        animation: 'fade',
+        transitionSpec: { animation: 'timing', config: { duration: 220 } },
+        sceneStyle: { backgroundColor: colors.bg },
         tabBarStyle: {
           backgroundColor: '#fff',
           borderTopWidth: 1,
           borderTopColor: colors.line,
-          height: 60 + insets.bottom,
+          height: 72 + insets.bottom,
           paddingTop: 6,
           paddingBottom: Math.max(insets.bottom, 8),
         },
-        tabBarLabelStyle: { fontWeight: '600', fontSize: 11 },
-        tabBarIcon: ({ focused, color, size }) => (
-          <View style={focused ? styles.tabActive : styles.tab}>
-            <Icon name={icons[route.name]} size={size + 2} color={color} />
-          </View>
-        ),
+        tabBarLabelStyle: { fontWeight: '700', fontSize: 11 },
+        // Tanpa riak/bayangan gelap saat tombol ditekan.
+        tabBarButton: (props) => <PlatformPressable {...props} android_ripple={{ color: 'transparent' }} pressColor="transparent" pressOpacity={1} />,
+        tabBarIcon: ({ focused }) => <Icon name={icons[route.name]} size={focused ? 36 : 32} dim={!focused} />,
         headerStyle,
         headerTintColor: '#fff',
         headerTitleStyle,
+        headerLeft: () => (
+          <View style={{ marginLeft: 14 }}>
+            <Logo size={34} radius={9} />
+          </View>
+        ),
       })}
     >
       <Tab.Screen name="Beranda" component={FeedScreen} options={{ title: 'LaporJalan' }} />
@@ -84,7 +93,7 @@ function Root() {
 
   if (loading) {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.bg }}>
         <ActivityIndicator size="large" color={colors.primary} />
       </View>
     );
@@ -93,7 +102,15 @@ function Root() {
   return (
     <>
       {session && <ProximityBanner />}
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          animation: 'slide_from_right',
+          animationDuration: 260,
+          gestureEnabled: true,
+          fullScreenGestureEnabled: true,
+          contentStyle: { backgroundColor: colors.bg },
+        }}
+      >
         {session ? (
           <>
             <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }} />
@@ -108,11 +125,22 @@ function Root() {
                 headerShadowVisible: false,
               }}
             />
+            <Stack.Screen
+              name="ReportsDone"
+              component={ReportsDoneScreen}
+              options={{
+                title: 'Laporan Selesai',
+                headerStyle,
+                headerTintColor: '#fff',
+                headerTitleStyle,
+                headerShadowVisible: false,
+              }}
+            />
           </>
         ) : (
           <>
-            <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-            <Stack.Screen name="Register" component={RegisterScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false, animation: 'fade' }} />
+            <Stack.Screen name="Register" component={RegisterScreen} options={{ headerShown: false, animation: 'fade' }} />
           </>
         )}
       </Stack.Navigator>
@@ -124,12 +152,12 @@ export default function App() {
   const [fontsLoaded] = useFonts({ BarlowSemiCondensed_600SemiBold, BarlowSemiCondensed_700Bold });
   if (!fontsLoaded) return null;
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider style={{ backgroundColor: colors.bg }}>
       <AuthProvider>
-          <NavigationContainer>
-            <StatusBar style="light" />
-            <Root />
-          </NavigationContainer>
+        <NavigationContainer theme={navTheme}>
+          <StatusBar style="light" />
+          <Root />
+        </NavigationContainer>
       </AuthProvider>
     </SafeAreaProvider>
   );

@@ -121,6 +121,7 @@ label { display: block; font-weight: 600; margin: 16px 0 6px; font-size: 14px; c
 /* ---------- shell ---------- */
 .shell { display: flex; min-height: 100vh; }
 .sidebar { width: 252px; background: var(--green-900); padding: 22px 14px; display: flex; flex-direction: column; gap: 4px; position: sticky; top: 0; height: 100vh; }
+.brand img { box-shadow: 0 0 0 2px rgba(255, 249, 235, 0.9); }
 .brand { display: flex; align-items: center; gap: 10px; color: #fff; font-family: var(--font-display); font-weight: 600; font-size: 23px; padding: 2px 10px 0; }
 .who { color: #8fb3a7; font-size: 12.5px; padding: 8px 10px 16px; margin-bottom: 8px; border-bottom: 1px dashed rgba(255, 255, 255, 0.25); }
 .nav {
@@ -128,7 +129,8 @@ label { display: block; font-weight: 600; margin: 16px 0 6px; font-size: 14px; c
   background: none; border: 0; color: #b9d3ca; text-align: left; padding: 10px 12px;
   border-radius: 8px; cursor: pointer; font: inherit; font-weight: 500;
 }
-.nav svg { width: 19px; height: 19px; flex: none; }
+/* Ikon pin hijau: diberi alas krem agar tetap terbaca di sidebar hijau. */
+.nav svg { width: 34px; height: 34px; flex: none; padding: 2px; border-radius: 10px; background: #fff9eb; }
 .nav:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
 .nav.active { background: #fff; color: var(--green-700); font-weight: 600; }
 .content { flex: 1; padding: 32px 40px 64px; min-width: 0; }
@@ -156,6 +158,10 @@ label { display: block; font-weight: 600; margin: 16px 0 6px; font-size: 14px; c
 .row-item img, .row-item .thumb { width: 68px; height: 50px; object-fit: cover; border-radius: 8px; }
 
 /* ---------- tabel ---------- */
+.seg { display: inline-flex; gap: 4px; padding: 4px; margin-bottom: 14px; background: #e6ebe8; border-radius: 12px; }
+.seg button { display: inline-flex; align-items: center; gap: 8px; border: 0; background: transparent; color: var(--muted); font-weight: 600; padding: 9px 16px; border-radius: 9px; cursor: pointer; transition: background 0.18s, color 0.18s; }
+.seg button.on { background: #fff; color: var(--primary, #0b5d4b); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+.seg-n { background: rgba(11, 93, 75, 0.12); border-radius: 999px; padding: 1px 9px; font-size: 12.5px; }
 .toolbar { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
 .toolbar input { flex: 1; min-width: 240px; }
 .toolbar select { width: auto; min-width: 160px; }

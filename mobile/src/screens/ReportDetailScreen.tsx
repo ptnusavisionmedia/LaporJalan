@@ -163,7 +163,7 @@ export function ReportDetailScreen({ route, navigation }: Props) {
 
           {!!report.address && (
             <View style={[styles.row, { alignItems: 'flex-start', marginTop: 4 }]}>
-              <Icon name="lokasi" size={20} color={colors.primary} style={{ marginTop: 1 }} />
+              <Icon name="lokasi" size={31} style={{ marginTop: 1 }} />
               <Text style={styles.address}>{report.address}</Text>
             </View>
           )}
@@ -189,7 +189,7 @@ export function ReportDetailScreen({ route, navigation }: Props) {
         {/* ===== Tombol aksi ===== */}
         <View style={styles.actionsRow}>
           <Pressable style={[styles.actionBtn, liked && styles.actionBtnOn]} onPress={toggleLike} accessibilityRole="button">
-            <Icon name={liked ? 'sudah-disukai' : 'suka'} size={24} color={liked ? colors.danger : colors.ink} />
+            <Icon name={liked ? 'sudah-disukai' : 'suka'} size={37} />
             <Text style={styles.actionLabel}>{liked ? 'Disukai' : 'Suka'} ({report.likes.length})</Text>
           </Pressable>
           {report.user_id === userId && (
@@ -197,14 +197,14 @@ export function ReportDetailScreen({ route, navigation }: Props) {
               {replacingPhoto ? (
                 <ActivityIndicator color={colors.primary} />
               ) : (
-                <Icon name="ganti-foto" size={24} color={colors.ink} />
+                <Icon name="ganti-foto" size={37} />
               )}
               <Text style={styles.actionLabel}>{replacingPhoto ? 'Mengunggah...' : 'Ganti foto'}</Text>
             </Pressable>
           )}
           {report.user_id === userId && (
             <Pressable style={[styles.actionBtn, styles.actionDanger]} onPress={removeReport} accessibilityRole="button">
-              <Icon name="hapus" size={24} color={colors.danger} />
+              <Icon name="hapus" size={37} />
               <Text style={[styles.actionLabel, { color: colors.danger }]}>Hapus laporan</Text>
             </Pressable>
           )}
@@ -218,7 +218,7 @@ export function ReportDetailScreen({ route, navigation }: Props) {
             style={[styles.vote, myVote?.still_damaged === true && styles.voteOnBad]}
             accessibilityRole="button"
           >
-            <Icon name="peringatan" size={28} color={colors.danger} />
+            <Icon name="peringatan" size={43} />
             <View style={{ flex: 1 }}>
               <Text style={styles.voteTitle}>Masih rusak</Text>
               <Text style={styles.voteSub}>{stillN} warga menyatakan ini</Text>
@@ -230,7 +230,7 @@ export function ReportDetailScreen({ route, navigation }: Props) {
             style={[styles.vote, myVote?.still_damaged === false && styles.voteOnGood]}
             accessibilityRole="button"
           >
-            <Icon name="berhasil" size={28} color={colors.primary} />
+            <Icon name="berhasil" size={43} />
             <View style={{ flex: 1 }}>
               <Text style={styles.voteTitle}>Sudah diperbaiki</Text>
               <Text style={styles.voteSub}>{fixedN} warga menyatakan ini</Text>

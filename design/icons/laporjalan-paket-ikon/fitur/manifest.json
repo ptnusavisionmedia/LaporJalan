@@ -1,9 +1,10 @@
 {
-  "name": "LaporJalan — Ikon Fitur",
-  "version": "1.0.0",
+  "name": "LaporJalan — Ikon Fitur Custom Pin",
+  "version": "2.0.0",
+  "concept": "Pin hijau + bidang krem + simbol fitur + lencana kuning; mengikuti buat-laporan-jalan-rusak.svg",
   "count": 91,
-  "grid": 32,
-  "stroke": 1.8,
+  "grid": 128,
+  "viewBox": 32,
   "palette": {
     "ink": "#0B5D4B",
     "soft": "#E2EFEA",

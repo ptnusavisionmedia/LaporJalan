@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="690" viewBox="0 0 1070 690"><rect width="1070" height="690" fill="#F2F4F3"/><text x="32" y="42" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="13" letter-spacing="3">LAPORJALAN / CUSTOM ICONS</text><text x="32" y="88" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="34" font-weight="700">Satu konsep. Semua fitur.</text><rect x="32" y="124" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="61" y="138" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 14 16 3l13 11M7 12v16h18V12" fill="currentColor" fill-opacity="0.12"/><rect x="13" y="20" width="6" height="8" rx="1" fill="#FFF9EB"/><path d="M13 8h6" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg><text x="151" y="346" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">Beranda</text><rect x="288" y="124" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="317" y="138" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m3 8 8-4 10 4 8-4v21l-8 4-10-4-8 4Z" fill="currentColor" fill-opacity="0.12"/><path d="M11 4v21m10-17v21" /><circle cx="21" cy="12" r="4" fill="#F2B705" stroke="currentColor"/><circle cx="21" cy="12" r="1" fill="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 86v5m0 12v5m-11-11h5m12 0h5" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <circle cx="99" cy="97" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    
+  </g></svg><text x="407" y="346" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">Peta kerusakan</text><rect x="544" y="124" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="573" y="138" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(.25)" stroke="none"><defs>
+    <clipPath id="custom-buat-laporan-brand-821"><circle cx="58" cy="48" r="27"/></clipPath>
+  </defs>
+  <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity="0.38" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="58" cy="48" r="27" fill="#FFF9EB"/>
+  <g clip-path="url(#custom-buat-laporan-brand-821)">
+    <path d="M52 20H64L80 79H36L52 20Z" fill="#0B5D4B"/>
+    <path d="M58 26V34M58 41V47M58 66V74" stroke="#FFF9EB" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M40 57L50 52L58 58L66 53L77 57" stroke="#F2B705" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity="0.8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="99" cy="97" r="22" fill="#FFF9EB"/>
+  <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="#0B5D4B" stroke-width="2.5"/>
+  <path d="M99 88V106M90 97H108" stroke="#0B5D4B" stroke-width="4.5" stroke-linecap="round"/>
+</g></svg><text x="663" y="346" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">Buat laporan</text><rect x="800" y="124" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="829" y="138" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M4 4v24h25" /><rect x="8" y="17" width="4" height="7" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="16" y="11" width="4" height="13" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="24" y="5" width="4" height="19" rx="1" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M91 104V96m8 8V88m8 16V93" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg><text x="919" y="346" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">Statistik</text><rect x="32" y="394" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="61" y="408" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M4 10h6l2-4h8l2 4h6v17H4Z" fill="currentColor" fill-opacity="0.12"/><circle cx="16" cy="18" r="5" /><circle cx="25" cy="13" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg><text x="151" y="616" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">Ambil foto</text><rect x="288" y="394" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="317" y="408" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 28 10 4m12 0 5 24M16 5v5m0 14v4" /><path d="m8 17 4-4 4 2 4-2 5 5-3 4-5-1-5 2Z" fill="currentColor" fill-opacity="0.12"/><path d="m12 18 4-1 4 1" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg><text x="407" y="616" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">Jalan berlubang</text><rect x="544" y="394" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="573" y="408" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M12 16l3 3 5-6" /><path d="M9 6h3" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg><text x="663" y="616" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">Selesai</text><rect x="800" y="394" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="829" y="408" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 24h22l-3-5v-7a8 8 0 0 0-16 0v7Z" fill="currentColor" fill-opacity="0.12"/><path d="M13 28a3 3 0 0 0 6 0M16 2v2" /><circle cx="25" cy="7" r="4" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg><text x="919" y="616" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">Notifikasi</text></svg>

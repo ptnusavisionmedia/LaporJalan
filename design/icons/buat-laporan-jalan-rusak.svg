@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Buat laporan jalan rusak — LaporJalan</title>
+  <desc id="desc">Pin lokasi hijau dengan jalan retak berwarna kuning dan lencana tambah untuk membuat laporan baru.</desc>
+  <defs>
+    <clipPath id="road-window"><circle cx="58" cy="48" r="27"/></clipPath>
+  </defs>
+  <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity="0.38" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="58" cy="48" r="27" fill="#FFF9EB"/>
+  <g clip-path="url(#road-window)">
+    <path d="M52 20H64L80 79H36L52 20Z" fill="#0B5D4B"/>
+    <path d="M58 26V34M58 41V47M58 66V74" stroke="#FFF9EB" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M40 57L50 52L58 58L66 53L77 57" stroke="#F2B705" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity="0.8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="99" cy="97" r="22" fill="#FFF9EB"/>
+  <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="#0B5D4B" stroke-width="2.5"/>
+  <path d="M99 88V106M90 97H108" stroke="#0B5D4B" stroke-width="4.5" stroke-linecap="round"/>
+</svg>

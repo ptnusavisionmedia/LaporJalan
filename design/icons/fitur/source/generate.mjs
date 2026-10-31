@@ -137,7 +137,59 @@ add('peringatan','Peringatan / error','Informasi gagal, izin ditolak atau bahaya
 add('berhasil','Berhasil','Konfirmasi aksi berhasil dan data tersimpan.',badge(check())+p('m25 3 1 2 3 1-3 1-1 3-1-3-3-1 3-1Z',accent));
 
 const palette = { ink: '#0B5D4B', soft: '#E2EFEA', cream: '#FFF9EB', accent: '#F2B705' };
-const body = (icon, mono = false) => icon.shapes.replaceAll('fill="SOFT"', mono ? 'fill="currentColor" fill-opacity="0.08"' : `fill="${palette.soft}"`).replaceAll('fill="CREAM"', mono ? 'fill="currentColor" fill-opacity="0.08"' : `fill="${palette.cream}"`).replaceAll('fill="ACCENT"', mono ? 'fill="currentColor"' : `fill="${palette.accent}"`).replaceAll('stroke="ACCENT"', mono ? 'stroke="currentColor"' : `stroke="${palette.accent}"`).replaceAll('fill="INK"', 'fill="currentColor"').replaceAll('stroke="INK"', 'stroke="currentColor"');
+const referenceSvg = await fs.readFile(path.join(root, '..', 'buat-laporan-jalan-rusak.svg'), 'utf8');
+const referenceArt = referenceSvg.slice(referenceSvg.indexOf('<defs>'), referenceSvg.lastIndexOf('</svg>'));
+const pinPath = 'M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z';
+const badgeGlyphs = {
+  plus: 'M99 88v18m-9-9h18', check: 'm90 97 6 6 12-13', close: 'm92 90 14 14m0-14-14 14',
+  warning: 'M99 87v12m0 6v.2', right: 'M89 97h19m-7-7 7 7-7 7', left: 'M109 97H90m7-7-7 7 7 7',
+  up: 'M99 107V88m-7 7 7-7 7 7', down: 'M99 87v19m-7-7 7 7 7-7',
+  clock: 'M99 87v11l7 4', chart: 'M91 104V96m8 8V88m8 16V93',
+  list: 'M91 91h16m-16 6h16m-16 6h16', info: 'M99 96v10m0-18v.2',
+  refresh: 'M107 94a9 9 0 1 0-2 10m3-16v7h-7',
+  edit: 'm91 101 12-12 5 5-12 12-6 1Z', eye: 'M87 97s5-7 12-7 12 7 12 7-5 7-12 7-12-7-12-7Z',
+  pin: 'M99 108s-9-8-9-14a9 9 0 0 1 18 0c0 6-9 14-9 14Z',
+  target: 'M99 86v5m0 12v5m-11-11h5m12 0h5',
+};
+const badgeMap = {
+  'beranda':'right','dashboard':'chart','peta':'target','buat-laporan':'plus','daftar-laporan':'list','statistik':'chart','profil':'check','pengguna':'plus',
+  'masuk':'right','keluar':'left','daftar-akun':'plus','password':'check','admin':'check','instansi':'check','atur-peran':'edit',
+  'kamera':'plus','galeri':'plus','unggah-foto':'up','ganti-foto':'refresh','foto-rusak':'warning','detail-laporan':'info','deskripsi':'edit','foto-sebelum':'left','foto-sesudah':'check','bandingkan-foto':'eye',
+  'lokasi':'pin','lokasi-saya':'target','rute':'right','wilayah':'pin','provinsi':'pin','kota':'pin','kecamatan':'pin','desa':'pin','sekitar-saya':'warning',
+  'status-menunggu':'clock','status-diverifikasi':'check','status-diproses':'refresh','status-selesai':'check','status-ditolak':'close','prioritas-rendah':'down','prioritas-sedang':'right','prioritas-tinggi':'up',
+  'suka':'plus','sudah-disukai':'check','komentar':'list','kirim':'right','validasi-masih-rusak':'warning','validasi-sudah-baik':'check','linimasa':'clock','tanggapan-admin':'check','tambah-perkembangan':'plus',
+  'cari':'eye','filter':'down','urutkan':'down','muat-ulang':'refresh','edit':'edit','simpan':'check','hapus':'close','tutup':'close','tambah':'plus','kembali':'left','panah-bawah':'down','opsi-lain':'list',
+  'notifikasi':'warning','notifikasi-nonaktif':'close','tanggal':'clock','informasi':'info','bantuan':'info',
+  'unduh':'down','bagikan':'right','tautan':'right','buka-eksternal':'right','koneksi':'check','koneksi-terputus':'close','belum-ada-laporan':'plus','peringatan':'warning','berhasil':'check',
+};
+let instance = 0;
+const body = (icon, mono = false) => {
+  const key = `custom-${icon.id}-${mono?'mono':'brand'}-${instance++}`;
+  // The approved custom reporting icon remains the exact visual reference.
+  if (icon.id === 'buat-laporan' && !mono) {
+    return `<g transform="scale(.25)" stroke="none">${referenceArt.replaceAll('road-window',key)}</g>`;
+  }
+  const glyph = icon.shapes.replaceAll('fill="SOFT"', 'fill="currentColor" fill-opacity="0.12"')
+    .replaceAll('fill="CREAM"', mono?'fill="currentColor" fill-opacity="0.08"':`fill="${palette.cream}"`)
+    .replaceAll('fill="ACCENT"', mono?'fill="currentColor"':`fill="${palette.accent}"`)
+    .replaceAll('stroke="ACCENT"',mono?'stroke="currentColor"':`stroke="${palette.accent}"`)
+    .replaceAll('fill="INK"','fill="currentColor"').replaceAll('stroke="INK"','stroke="currentColor"');
+  const badgeName = badgeMap[icon.id] ?? (icon.group === '03-jenis-kerusakan' ? 'warning' : 'info');
+  const badgeMark = badgeGlyphs[badgeName];
+  const cutout = mono ? `<defs><mask id="${key}-cut"><rect width="128" height="128" fill="white"/><circle cx="58" cy="48" r="27" fill="black"/><circle cx="99" cy="97" r="22" fill="black"/><path d="M49 88L58 96L67 88" fill="none" stroke="black" stroke-width="2.5"/></mask></defs>` : '';
+  return `<g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="${mono?'inherit':palette.ink}">
+    ${cutout}<path d="${pinPath}" fill="${mono?'currentColor':palette.ink}" stroke="${mono?'currentColor':'#06372D'}" stroke-width="2.5"${mono?` mask="url(#${key}-cut)"`:''}/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="${mono?'currentColor':palette.soft}" stroke-opacity="${mono?'.3':'.38'}" stroke-width="3"/>
+    ${mono?'':`<circle cx="58" cy="48" r="27" fill="${palette.cream}" stroke="none"/>`}
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3">${glyph}</g>
+    ${mono?'':`<path d="M49 88L58 96L67 88" stroke="${palette.soft}" stroke-opacity=".8" stroke-width="2.5" fill="none"/>`}
+    ${mono?'':`<circle cx="99" cy="97" r="22" fill="${palette.cream}" stroke="none"/>`}
+    <circle cx="99" cy="97" r="18.5" fill="${mono?'none':palette.accent}" stroke="currentColor" stroke-width="2.5"/>
+    <path d="${badgeMark}" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    ${badgeName==='target'?'<circle cx="99" cy="97" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/>':''}
+    ${badgeName==='eye'||badgeName==='pin'?'<circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>':''}
+  </g>`;
+};
 const svg = (icon, mono = false) => `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="${palette.ink}" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-${icon.id}-${mono?'mono':'brand'}"><title id="title-${icon.id}-${mono?'mono':'brand'}">${icon.label}</title>${body(icon,mono)}</svg>\n`;
 for (const icon of icons) {
   for (const [variant, mono] of [['berwarna',false],['satu-warna',true]]) {
@@ -147,7 +199,7 @@ for (const icon of icons) {
   }
 }
 
-const manifest = { name:'LaporJalan — Ikon Fitur', version:'1.0.0', count:icons.length, grid:32, stroke:1.8, palette, icons: icons.map(({shapes,...icon})=>({...icon,svg:`svg/berwarna/${icon.group}/${icon.id}.svg`,mono:`svg/satu-warna/${icon.group}/${icon.id}.svg`,png:`png/berwarna/${icon.group}/${icon.id}.png`,pngMono:`png/satu-warna/${icon.group}/${icon.id}.png`})) };
+const manifest = { name:'LaporJalan — Ikon Fitur Custom Pin', version:'2.0.0', concept:'Pin hijau + bidang krem + simbol fitur + lencana kuning; mengikuti buat-laporan-jalan-rusak.svg', count:icons.length, grid:128, viewBox:32, palette, icons: icons.map(({shapes,...icon})=>({...icon,svg:`svg/berwarna/${icon.group}/${icon.id}.svg`,mono:`svg/satu-warna/${icon.group}/${icon.id}.svg`,png:`png/berwarna/${icon.group}/${icon.id}.png`,pngMono:`png/satu-warna/${icon.group}/${icon.id}.png`})) };
 await fs.writeFile(path.join(root,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
 for (const [variant,mono] of [['berwarna',false],['satu-warna',true]]) {
   const symbols=icons.map(icon=>`<symbol id="lj-${icon.id}" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${body(icon,mono)}</g></symbol>`).join('\n');
@@ -161,28 +213,48 @@ const html = `<!doctype html><html lang="id"><head><meta charset="utf-8"><meta n
 </style></head><body><header class="hero"><img src="../laporjalan-icon.png" alt="Logo LaporJalan"><div><div class="eyebrow">LaporJalan / Sistem ikon fitur / 01</div><h1>Satu identitas.<br>Setiap fitur punya tanda.</h1><p>${icons.length} ikon khusus untuk aplikasi warga dan web pengelola. Bentuk membulat, garis tegas, serta warna yang mengikuti logo LaporJalan.</p><div class="chips"><span>32 × 32 grid</span><span>SVG transparan</span><span>2 varian</span><span>Mobile + web</span></div></div></header><main><div class="controls"><input id="search" type="search" aria-label="Cari ikon" placeholder="Cari fitur: kamera, status, instansi, aksesibilitas…"><select id="variant" aria-label="Varian ikon"><option value="brand">Berwarna</option><option value="mono">Satu warna</option></select><select id="size" aria-label="Ukuran pratinjau"><option value="46">Pratinjau 46 px</option><option value="24">Uji 24 px</option></select><button id="theme" type="button">Uji latar gelap</button></div><div class="palette"><strong>Palet identitas</strong>${Object.entries(palette).map(([name,color])=>`<span><i class="swatch" style="background:${color}"></i>${color}</span>`).join('')}<span id="count">${icons.length} ikon ditampilkan</span></div><div class="notice">Buka tautan di setiap kartu untuk mengambil file SVG. Katalog ini dapat dibuka langsung tanpa internet. Aset disimpan terpisah; pemasangan ke layar aplikasi belum dilakukan.</div>${cards}<p id="empty" hidden>Tidak ada ikon yang cocok. Coba kata lain.</p><footer class="foot">LaporJalan · Ikon dibuat khusus mengikuti identitas logo · Nama, fungsi, dan lokasi file tersedia di manifest.json dan PANDUAN.md.</footer></main><script>
 const original=[...document.querySelectorAll('.sample')].map(e=>e.innerHTML);const mono=${JSON.stringify(icons.map(i=>svg(i,true)))};const search=document.getElementById('search');search.addEventListener('input',()=>{let count=0;for(const card of document.querySelectorAll('.card')){card.hidden=!card.dataset.search.includes(search.value.trim().toLowerCase());if(!card.hidden)count++}for(const section of document.querySelectorAll('section'))section.hidden=![...section.querySelectorAll('.card')].some(c=>!c.hidden);document.getElementById('count').textContent=count+' ikon ditampilkan';document.getElementById('empty').hidden=count>0});document.getElementById('variant').addEventListener('change',e=>{document.body.classList.toggle('mono',e.target.value==='mono');document.querySelectorAll('.sample').forEach((el,i)=>el.innerHTML=e.target.value==='mono'?mono[i]:original[i])});document.getElementById('size').addEventListener('change',e=>document.body.classList.toggle('size24',e.target.value==='24'));document.getElementById('theme').addEventListener('click',e=>{const dark=document.body.classList.toggle('dark');e.target.textContent=dark?'Uji latar terang':'Uji latar gelap'});
 </script></body></html>`;
-await fs.writeFile(path.join(root,'index.html'),html.replace(/(<a download href="svg\/berwarna\/([^"<>]+)\.svg">SVG warna ↗<\/a>)/g, '$1<a download href="png/berwarna/$2.png">PNG ↗</a>'));
+await fs.writeFile(path.join(root,'index.html'),html.replace(/(<a download href="svg\/berwarna\/([^"<>]+)\.svg">SVG warna ↗<\/a>)/g, '$1<a download href="png/berwarna/$2.png">PNG ↗</a>')
+  .replace('Satu identitas.<br>Setiap fitur punya tanda.','Satu konsep pin.<br>Semua fitur seragam.')
+  .replace('Bentuk membulat, garis tegas, serta warna yang mengikuti logo LaporJalan.','Mengikuti ikon custom yang disetujui: pin hijau, lingkaran krem, simbol fitur dan lencana kuning.')
+  .replace('32 × 32 grid','128 × 128 master')
+  .replace('.sample svg{width:46px;height:46px}', '.sample svg{width:72px;height:72px}')
+  .replace('.dark .sample svg{color:#FFF9EB}', '.dark .sample svg{color:#FFF9EB}')
+  .replace('.dark .sample svg [fill="#E2EFEA"],.dark .sample svg [fill="#FFF9EB"]{fill:#ffffff18}', '')
+  .replace('value="46">Pratinjau 46 px','value="72">Pratinjau 72 px')
+  );
 for (const [variant,mono] of [['berwarna',false],['satu-warna',true]]) {
-  const atlas=`<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent;width:2048px}body{display:grid;grid-template-columns:repeat(8,256px);grid-auto-rows:256px}svg{display:block;width:256px;height:256px}</style></head><body>${icons.map(i=>svg(i,mono)).join('')}</body></html>`;
+  const atlas=`<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent;width:4096px}body{display:grid;grid-template-columns:repeat(8,512px);grid-auto-rows:512px}svg{display:block;width:512px;height:512px}</style></head><body>${icons.map(i=>svg(i,mono)).join('')}</body></html>`;
   await fs.writeFile(path.join(root,'source',`atlas-${variant}.html`),atlas);
 }
 
 const guide = `# Ikon Fitur LaporJalan\n\n${icons.length} ikon asli untuk fitur yang ditemukan pada aplikasi mobile dan web admin saat paket ini dibuat. Berbasis logo hijau dengan simbol lokasi/jalan dan aksen kuning.\n\n## Mulai dari sini\n\nBuka **index.html** untuk melihat seluruh ikon, mencari berdasarkan nama fitur, beralih ke satu warna, serta menguji ukuran 24 px dan latar gelap. Tidak memerlukan internet. Logo utama tetap berada satu folder di atas: ../laporjalan-icon.png.\n\n## Susunan folder\n\n- index.html: katalog interaktif.\n- svg/berwarna/: ikon hijau dengan isian hijau muda/krem dan aksen kuning.\n- svg/satu-warna/: ikon currentColor untuk mengikuti warna teks atau tombol.\n- sprite-berwarna.svg dan sprite-satu-warna.svg: semua simbol dalam satu file untuk web.\n- manifest.json: daftar lengkap dan pemetaan fitur ke lokasi file.\n- source/generate.mjs: sumber geometri SVG dan generator katalog.\n\n## Aturan visual\n\nGrid 32 × 32, garis 1,8 unit, ujung dan sambungan membulat. Gunakan ukuran 24 atau 32 px untuk antarmuka; 48–96 px untuk kartu fitur. SVG tidak pecah saat diperbesar dan latarnya transparan. Hijau utama #0B5D4B, hijau lembut #E2EFEA, krem #FFF9EB, aksen kuning #F2B705. Gunakan label/status selain warna agar aksesibel. Varian satu warna dapat tampil putih/krem di tombol hijau.\n\nUntuk SVG yang dipasang sebagai img, warna currentColor di dalam file tidak diwariskan dari halaman. Gunakan inline SVG atau sprite jika perlu mewarisi warna teks. Contoh sprite melalui server web lokal:\n\n\`\`\`html\n<svg width="24" height="24" style="color:#0B5D4B" aria-hidden="true">\n  <use href="sprite-satu-warna.svg#lj-beranda"></use>\n</svg>\n\`\`\`\n\nIkon dekoratif: aria-hidden. Tombol hanya ikon: tambahkan aria-label pada tombol. React Native memerlukan renderer SVG seperti react-native-svg atau ekspor PNG; file SVG tidak langsung dapat dipasang ke komponen Image standar. Paket ini belum mengubah antarmuka aplikasi atau menambah dependency.\n\n## Daftar dan pemetaan fitur\n\n${grouped.map(([id,g])=>`### ${g.label}\n\n| Ikon | Fungsi | Berkas berwarna |\n|---|---|---|\n${g.icons.map(i=>`| ${i.label} | ${i.use} | svg/berwarna/${id}/${i.id}.svg |`).join('\n')}`).join('\n\n')}\n\n## Pemeriksaan\n\nGenerator memeriksa ID unik, referensi file, token warna, dan batas markup dasar. Uji ukuran kecil dan kebutuhan aksesibilitas akhir tetap dilakukan saat ikon dipasang pada layar sebenarnya. Fitur unduh/bagikan/bantuan disediakan sebagai aset pendukung; keberadaan ikon tidak berarti fungsi tersebut sudah dibuat di aplikasi.\n\nBangun ulang aset dengan menjalankan node design/icons/fitur/source/generate.mjs dari folder project.\n`;
 await fs.writeFile(path.join(root,'PANDUAN.md'),guide);
-await fs.appendFile(path.join(root,'PANDUAN.md'),'\n## Ekspor PNG dan paket\n\nFolder png/berwarna/ dan png/satu-warna/ berisi versi 256 × 256 px dengan latar transparan, siap diimpor sebagai gambar di mobile atau web. Gunakan SVG sebagai master untuk perubahan ukuran/warna. pratinjau.png adalah lembar semua ikon, bukan file ikon individual. Untuk mengulang ekspor PNG di Windows, jalankan source/export-png.ps1 setelah generator; memerlukan Microsoft Edge. Lihat source/QA.json untuk hasil pemeriksaan aset.\n');
+await fs.writeFile(path.join(root,'PANDUAN.md'),guide
+  .replace('Berbasis logo hijau dengan simbol lokasi/jalan dan aksen kuning.','Seluruh 91 ikon memakai konsep yang sama dengan ikon custom Buat Laporan Jalan Rusak: badan pin hijau, highlight melengkung, bidang krem untuk simbol fitur, chevron, serta lencana kuning dengan cincin krem. Set lama telah diganti pada nama file yang sama.')
+  .replace('Grid 32 × 32, garis 1,8 unit, ujung dan sambungan membulat. Gunakan ukuran 24 atau 32 px untuk antarmuka; 48–96 px untuk kartu fitur.','Master 128 × 128, diekspor dengan viewBox 32 × 32 untuk kompatibilitas. Gunakan ukuran 64–128 px untuk ikon fitur agar detail pin dan lencana tetap terbaca; untuk tombol kecil gunakan label pendamping. Bentuk pin, proporsi, warna, highlight dan posisi lencana mengikuti referensi yang sama. Varian satu warna mempertahankan siluet pin dengan bidang tengah transparan.')
+  .replace('isian hijau muda/krem','bidang krem dan lencana kuning'));
+await fs.appendFile(path.join(root,'PANDUAN.md'),'\n## Ekspor PNG\n\nFolder png/berwarna/ dan png/satu-warna/ berisi versi 512 × 512 px dengan latar transparan, sama resolusinya dengan ikon custom acuan. Gunakan SVG sebagai master untuk perubahan ukuran/warna. pratinjau.png adalah lembar semua ikon, bukan file ikon individual. Untuk mengulang ekspor PNG di Windows, jalankan source/export-png.ps1 setelah generator; memerlukan Microsoft Edge. Lihat source/QA.json untuk hasil pemeriksaan aset. Tidak ada ZIP.\n');
 
 // A self-contained overview sheet, suitable for browser viewing or rendering.
-const W=1440, cols=8, cellW=166, cellH=132, left=56;
+const W=1440, cols=8, cellW=166, cellH=154, left=56;
 let y=216;
 let sheet=`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="HEIGHT" viewBox="0 0 ${W} HEIGHT"><rect width="100%" height="100%" fill="#F2F4F3"/><rect width="1440" height="170" fill="#0B5D4B"/><text x="56" y="57" fill="#F2B705" font-family="Segoe UI,Arial" font-size="14" letter-spacing="3">LAPORJALAN / SISTEM IKON FITUR</text><text x="56" y="112" fill="#FFF9EB" font-family="Segoe UI,Arial" font-weight="700" font-size="42">${icons.length} ikon. Satu identitas.</text><text x="56" y="146" fill="#D7E9E0" font-family="Segoe UI,Arial" font-size="17">Navigasi, laporan, aksesibilitas, wilayah, status, komunitas, dan pengelolaan.</text>`;
 for (const [,g] of grouped) {
   sheet+=`<text x="56" y="${y}" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="22" font-weight="700">${g.label.replaceAll('&','&amp;')}</text>`;
   y+=20;
-  g.icons.forEach((icon,i)=>{const x=left+(i%cols)*cellW,yy=y+Math.floor(i/cols)*cellH;sheet+=`<rect x="${x}" y="${yy}" width="154" height="116" rx="14" fill="white" stroke="#D9DFDC"/><svg x="${x+53}" y="${yy+15}" width="48" height="48" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${body(icon)}</svg><text x="${x+77}" y="${yy+85}" text-anchor="middle" fill="#16201D" font-family="Segoe UI,Arial" font-size="11">${icon.label.replaceAll('&','&amp;')}</text><text x="${x+77}" y="${yy+103}" text-anchor="middle" fill="#62716B" font-family="Segoe UI,Arial" font-size="9">${icon.id}</text>`;});
+  g.icons.forEach((icon,i)=>{const x=left+(i%cols)*cellW,yy=y+Math.floor(i/cols)*cellH;sheet+=`<rect x="${x}" y="${yy}" width="154" height="138" rx="14" fill="white" stroke="#D9DFDC"/><svg x="${x+37}" y="${yy+10}" width="80" height="80" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${body(icon)}</svg><text x="${x+77}" y="${yy+108}" text-anchor="middle" fill="#16201D" font-family="Segoe UI,Arial" font-size="11">${icon.label.replaceAll('&','&amp;')}</text><text x="${x+77}" y="${yy+126}" text-anchor="middle" fill="#62716B" font-family="Segoe UI,Arial" font-size="9">${icon.id}</text>`;});
   y+=Math.ceil(g.icons.length/cols)*cellH+28;
 }
-sheet+=`<text x="56" y="${y+8}" fill="#62716B" font-family="Segoe UI,Arial" font-size="13">SVG transparan · 2 varian · Grid 32 × 32 · Katalog lengkap: index.html</text></svg>`;
+sheet+=`<text x="56" y="${y+8}" fill="#62716B" font-family="Segoe UI,Arial" font-size="13">Konsep custom pin · SVG + PNG 512 px transparan · Katalog lengkap: index.html</text></svg>`;
 await fs.writeFile(path.join(root,'pratinjau.svg'),sheet.replaceAll('HEIGHT',String(y+50)));
+
+const sampleIds = ['beranda','peta','buat-laporan','statistik','kamera','jalan-berlubang','status-selesai','notifikasi'];
+const sampleCards = sampleIds.map((id,i)=>{
+  const icon = icons.find(icon=>icon.id===id);
+  const x=32+(i%4)*256, yy=124+Math.floor(i/4)*270;
+  return `<rect x="${x}" y="${yy}" width="238" height="250" rx="22" fill="white" stroke="#D9DFDC"/><svg x="${x+29}" y="${yy+14}" width="180" height="180" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke-linecap="round" stroke-linejoin="round">${body(icon)}</svg><text x="${x+119}" y="${yy+222}" text-anchor="middle" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="18" font-weight="600">${icon.label}</text>`;
+}).join('');
+await fs.writeFile(path.join(root,'contoh-konsep.svg'),`<svg xmlns="http://www.w3.org/2000/svg" width="1070" height="690" viewBox="0 0 1070 690"><rect width="1070" height="690" fill="#F2F4F3"/><text x="32" y="42" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="13" letter-spacing="3">LAPORJALAN / CUSTOM ICONS</text><text x="32" y="88" fill="#0B5D4B" font-family="Segoe UI,Arial" font-size="34" font-weight="700">Satu konsep. Semua fitur.</text>${sampleCards}</svg>`);
 
 if(new Set(icons.map(i=>i.id)).size!==icons.length)throw Error('Duplicate icon IDs');
 for(const icon of manifest.icons){for(const key of ['svg','mono']){const data=await fs.readFile(path.join(root,icon[key]),'utf8');if(/SOFT|CREAM|ACCENT|INK|undefined|NaN/.test(data))throw Error(`Unresolved token ${icon.id}`);if(!data.includes('<title')||!data.includes('viewBox="0 0 32 32"'))throw Error(`Invalid SVG ${icon.id}`);}}

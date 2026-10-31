@@ -14,7 +14,7 @@ export function Chips({ report }: { report: Report }) {
   return (
     <View style={styles.chips}>
       <View style={[styles.chip, cat.access && { backgroundColor: colors.primarySoft, borderColor: colors.primarySoft }]}>
-        <Icon name={cat.icon} size={14} color={colors.text} />
+        <Icon name={cat.icon} size={22} />
         <Text style={styles.chipText}>{cat.label}</Text>
       </View>
       <View style={styles.chip}>
@@ -72,7 +72,7 @@ export function ReportCard({ report, userId, onPress, onLike }: Props) {
         <Chips report={report} />
         {!!report.address && (
           <View style={styles.row}>
-            <Icon name="lokasi" size={14} color={colors.muted} />
+            <Icon name="lokasi" size={22} />
             <Text style={styles.meta} numberOfLines={1}>
               {report.address}
             </Text>
@@ -87,11 +87,11 @@ export function ReportCard({ report, userId, onPress, onLike }: Props) {
 
       <View style={styles.actions}>
         <Pressable style={styles.action} onPress={onLike} hitSlop={8}>
-          <Icon name={liked ? 'sudah-disukai' : 'suka'} size={22} color={liked ? colors.pink : colors.muted} />
+          <Icon name={liked ? 'sudah-disukai' : 'suka'} size={34} />
           <Text style={[styles.actionText, liked && { color: colors.pink }]}>{report.likes.length}</Text>
         </Pressable>
         <View style={styles.action}>
-          <Icon name="komentar" size={20} color={colors.muted} />
+          <Icon name="komentar" size={31} />
           <Text style={styles.actionText}>{commentCount}</Text>
         </View>
         <View style={{ flex: 1 }} />

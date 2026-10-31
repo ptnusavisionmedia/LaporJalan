@@ -30,7 +30,8 @@ export function Reports({
 }) {
   const [reports, setReports] = useState<Report[]>([])
   const [loading, setLoading] = useState(true)
-  const [filter, setFilter] = useState<Status | 'semua' | 'aktif'>('aktif')
+  const [tab, setTab] = useState<'belum' | 'selesai'>('belum')
+  const [filter, setFilter] = useState<Status | 'semua'>('semua')
   const [category, setCategory] = useState<Category | 'semua'>('semua')
   const [sort, setSort] = useState<'prioritas' | 'terbaru'>('prioritas')
   const [search, setSearch] = useState('')
@@ -52,11 +53,14 @@ export function Reports({
   }, [load])
 
   const q = search.trim().toLowerCase()
+  const doneCount = reports.filter((r) => r.status === 'selesai').length
+  const belumCount = reports.length - doneCount
+  // Laporan yang diubah menjadi "selesai" otomatis pindah dari tab "Belum selesai" ke tab "Selesai".
   const shown = reports
     .filter(
       (r) =>
-        (filter === 'semua' ||
-          (filter === 'aktif' ? r.status !== 'selesai' && r.status !== 'ditolak' : r.status === filter)) &&
+        (tab === 'selesai' ? r.status === 'selesai' : r.status !== 'selesai') &&
+        (tab === 'selesai' || filter === 'semua' || r.status === filter) &&
         (category === 'semua' || r.category === category) &&
         (!q ||
           r.title.toLowerCase().includes(q) ||
@@ -74,9 +78,19 @@ export function Reports({
   return (
     <>
       <h2>Kelola Laporan</h2>
+      <div className="seg" role="tablist">
+        <button role="tab" aria-selected={tab === 'belum'} className={tab === 'belum' ? 'on' : ''} onClick={() => setTab('belum')}>
+          Belum selesai <span className="seg-n">{belumCount}</span>
+        </button>
+        <button role="tab" aria-selected={tab === 'selesai'} className={tab === 'selesai' ? 'on' : ''} onClick={() => setTab('selesai')}>
+          Sudah selesai <span className="seg-n">{doneCount}</span>
+        </button>
+      </div>
       <div className="toolbar">
         <input placeholder="Cari judul, alamat, wilayah, atau username..." value={search} onChange={(e) => setSearch(e.target.value)} />
-        <Select label="Filter status" value={filter} onChange={setFilter} options={[{ value: 'aktif', label: 'Belum selesai' }, { value: 'semua', label: 'Semua status' }, ...STATUSES.map((s) => ({ value: s, label: STATUS_LABEL[s] }))]} />
+        {tab === 'belum' && (
+          <Select label="Filter status" value={filter} onChange={setFilter} options={[{ value: 'semua', label: 'Semua status' }, ...STATUSES.filter((s) => s !== 'selesai').map((s) => ({ value: s, label: STATUS_LABEL[s] }))]} />
+        )}
         <Select label="Filter jenis" value={category} onChange={setCategory} options={[{ value: 'semua', label: 'Semua jenis' }, ...CATEGORIES.map((c) => ({ value: c, label: CATEGORY_LABEL[c] }))]} />
         <Select label="Urutan" value={sort} onChange={setSort} options={[{ value: 'prioritas', label: 'Urut: prioritas' }, { value: 'terbaru', label: 'Urut: terbaru' }]} />
         <button className="btn" onClick={load}>
@@ -109,7 +123,7 @@ export function Reports({
             {!loading && shown.length === 0 && (
               <tr>
                 <td colSpan={7} className="muted">
-                  Tidak ada laporan.
+                  {tab === 'selesai' ? 'Belum ada laporan yang selesai.' : 'Tidak ada laporan yang belum selesai.'}
                 </td>
               </tr>
             )}

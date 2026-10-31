@@ -111,7 +111,7 @@ export function ProximityBanner() {
         nav.navigate('ReportDetail', { id: report.id });
       }}
     >
-      <Icon name="area-berbahaya" size={28} color="#fff" />
+      <Icon name="area-berbahaya" size={43} />
       <View style={{ flex: 1 }}>
         <Text style={styles.title}>Hati-hati! Area berbahaya ±{Math.round(meters)} m</Text>
         <Text style={styles.sub} numberOfLines={2}>
@@ -119,7 +119,7 @@ export function ProximityBanner() {
         </Text>
       </View>
       <Pressable onPress={() => setAlert(null)} hitSlop={10}>
-        <Icon name="tutup" size={24} color="#fff" />
+        <Icon name="tutup" size={37} />
       </Pressable>
     </Pressable>
   );

@@ -1,6 +1,6 @@
 # Ikon Fitur LaporJalan
 
-91 ikon asli untuk fitur yang ditemukan pada aplikasi mobile dan web admin saat paket ini dibuat. Berbasis logo hijau dengan simbol lokasi/jalan dan aksen kuning.
+91 ikon asli untuk fitur yang ditemukan pada aplikasi mobile dan web admin saat paket ini dibuat. Seluruh 91 ikon memakai konsep yang sama dengan ikon custom Buat Laporan Jalan Rusak: badan pin hijau, highlight melengkung, bidang krem untuk simbol fitur, chevron, serta lencana kuning dengan cincin krem. Set lama telah diganti pada nama file yang sama.
 
 ## Mulai dari sini
 
@@ -9,7 +9,7 @@ Buka **index.html** untuk melihat seluruh ikon, mencari berdasarkan nama fitur, 
 ## Susunan folder
 
 - index.html: katalog interaktif.
-- svg/berwarna/: ikon hijau dengan isian hijau muda/krem dan aksen kuning.
+- svg/berwarna/: ikon hijau dengan bidang krem dan lencana kuning dan aksen kuning.
 - svg/satu-warna/: ikon currentColor untuk mengikuti warna teks atau tombol.
 - sprite-berwarna.svg dan sprite-satu-warna.svg: semua simbol dalam satu file untuk web.
 - manifest.json: daftar lengkap dan pemetaan fitur ke lokasi file.
@@ -17,7 +17,7 @@ Buka **index.html** untuk melihat seluruh ikon, mencari berdasarkan nama fitur, 
 
 ## Aturan visual
 
-Grid 32 × 32, garis 1,8 unit, ujung dan sambungan membulat. Gunakan ukuran 24 atau 32 px untuk antarmuka; 48–96 px untuk kartu fitur. SVG tidak pecah saat diperbesar dan latarnya transparan. Hijau utama #0B5D4B, hijau lembut #E2EFEA, krem #FFF9EB, aksen kuning #F2B705. Gunakan label/status selain warna agar aksesibel. Varian satu warna dapat tampil putih/krem di tombol hijau.
+Master 128 × 128, diekspor dengan viewBox 32 × 32 untuk kompatibilitas. Gunakan ukuran 64–128 px untuk ikon fitur agar detail pin dan lencana tetap terbaca; untuk tombol kecil gunakan label pendamping. Bentuk pin, proporsi, warna, highlight dan posisi lencana mengikuti referensi yang sama. Varian satu warna mempertahankan siluet pin dengan bidang tengah transparan. SVG tidak pecah saat diperbesar dan latarnya transparan. Hijau utama #0B5D4B, hijau lembut #E2EFEA, krem #FFF9EB, aksen kuning #F2B705. Gunakan label/status selain warna agar aksesibel. Varian satu warna dapat tampil putih/krem di tombol hijau.
 
 Untuk SVG yang dipasang sebagai img, warna currentColor di dalam file tidak diwariskan dari halaman. Gunakan inline SVG atau sprite jika perlu mewarisi warna teks. Contoh sprite melalui server web lokal:
 
@@ -178,6 +178,6 @@ Generator memeriksa ID unik, referensi file, token warna, dan batas markup dasar
 
 Bangun ulang aset dengan menjalankan node design/icons/fitur/source/generate.mjs dari folder project.
 
-## Ekspor PNG dan paket
+## Ekspor PNG
 
-Folder png/berwarna/ dan png/satu-warna/ berisi versi 256 × 256 px dengan latar transparan, siap diimpor sebagai gambar di mobile atau web. Gunakan SVG sebagai master untuk perubahan ukuran/warna. pratinjau.png adalah lembar semua ikon, bukan file ikon individual. Untuk mengulang ekspor PNG di Windows, jalankan source/export-png.ps1 setelah generator; memerlukan Microsoft Edge. Lihat source/QA.json untuk hasil pemeriksaan aset.
+Folder png/berwarna/ dan png/satu-warna/ berisi versi 512 × 512 px dengan latar transparan, sama resolusinya dengan ikon custom acuan. Gunakan SVG sebagai master untuk perubahan ukuran/warna. pratinjau.png adalah lembar semua ikon, bukan file ikon individual. Untuk mengulang ekspor PNG di Windows, jalankan source/export-png.ps1 setelah generator; memerlukan Microsoft Edge. Lihat source/QA.json untuk hasil pemeriksaan aset. Tidak ada ZIP.

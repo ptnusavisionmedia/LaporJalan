@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalan-berlubang-brand"><title id="title-jalan-berlubang-brand">Jalan berlubang</title><path d="M5 28 10 4m12 0 5 24M16 5v5m0 14v4" /><path d="m8 17 4-4 4 2 4-2 5 5-3 4-5-1-5 2Z" fill="#E2EFEA"/><path d="m12 18 4-1 4 1" stroke="#F2B705"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalan-berlubang-brand"><title id="title-jalan-berlubang-brand">Jalan berlubang</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 28 10 4m12 0 5 24M16 5v5m0 14v4" /><path d="m8 17 4-4 4 2 4-2 5 5-3 4-5-1-5 2Z" fill="currentColor" fill-opacity="0.12"/><path d="m12 18 4-1 4 1" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>

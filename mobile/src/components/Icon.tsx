@@ -1,6 +1,7 @@
 import { Image, type ImageStyle, type StyleProp } from 'react-native';
 
-// Ikon resmi LaporJalan (design/icons/fitur, varian satu warna). Warna diatur lewat `color`.
+// Ikon resmi LaporJalan (design/icons/fitur, varian berwarna: pin hijau + lencana kuning).
+// Detailnya baru terbaca mulai ±28 px, jadi pakai ukuran besar atau sertakan label.
 const sources = {
   beranda: require('../../assets/icons/beranda.png'),
   peta: require('../../assets/icons/peta.png'),
@@ -37,19 +38,20 @@ export type IconName = keyof typeof sources;
 
 export function Icon({
   name,
-  size = 20,
-  color,
+  size = 28,
+  dim,
   style,
 }: {
   name: IconName;
   size?: number;
-  color?: string;
+  /** Redupkan (mis. tab tidak aktif atau tombol nonaktif). */
+  dim?: boolean;
   style?: StyleProp<ImageStyle>;
 }) {
   return (
     <Image
       source={sources[name]}
-      style={[{ width: size, height: size, tintColor: color }, style]}
+      style={[{ width: size, height: size, opacity: dim ? 0.5 : 1 }, style]}
       resizeMode="contain"
       accessibilityElementsHidden
       importantForAccessibility="no-hide-descendants"

@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-selesai-brand"><title id="title-status-selesai-brand">Selesai</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M12 16l3 3 5-6" /><path d="M9 6h3" stroke="#F2B705"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-selesai-brand"><title id="title-status-selesai-brand">Selesai</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M12 16l3 3 5-6" /><path d="M9 6h3" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>

@@ -1,92 +1,1097 @@
-<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent;width:2048px}body{display:grid;grid-template-columns:repeat(8,256px);grid-auto-rows:256px}svg{display:block;width:256px;height:256px}</style></head><body><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-beranda-brand"><title id="title-beranda-brand">Beranda</title><path d="M3 14 16 3l13 11M7 12v16h18V12" fill="#E2EFEA"/><rect x="13" y="20" width="6" height="8" rx="1" fill="#FFF9EB"/><path d="M13 8h6" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-dashboard-brand"><title id="title-dashboard-brand">Dashboard</title><rect x="4" y="4" width="10" height="14" rx="2" fill="#E2EFEA"/><rect x="18" y="4" width="10" height="8" rx="2" fill="#F2B705" stroke="currentColor"/><rect x="18" y="16" width="10" height="12" rx="2" fill="#E2EFEA"/><rect x="4" y="22" width="10" height="6" rx="2" fill="#E2EFEA"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-peta-brand"><title id="title-peta-brand">Peta kerusakan</title><path d="m3 8 8-4 10 4 8-4v21l-8 4-10-4-8 4Z" fill="#E2EFEA"/><path d="M11 4v21m10-17v21" /><circle cx="21" cy="12" r="4" fill="#F2B705" stroke="currentColor"/><circle cx="21" cy="12" r="1" fill="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-buat-laporan-brand"><title id="title-buat-laporan-brand">Buat laporan</title><rect x="7" y="4" width="18" height="24" rx="3" fill="#E2EFEA"/><path d="M11 10h10m-10 5h7m-7 5h10" /><circle cx="24" cy="24" r="5" fill="#F2B705" stroke="currentColor"/><path d="M22 24h4m-2-2v4" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-daftar-laporan-brand"><title id="title-daftar-laporan-brand">Daftar laporan</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#E2EFEA"/><path d="M13 10h10m-10 6h10m-10 6h10" /><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="9" cy="16" r="1" fill="currentColor"/><circle cx="9" cy="22" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-statistik-brand"><title id="title-statistik-brand">Statistik</title><path d="M4 4v24h25" /><rect x="8" y="17" width="4" height="7" rx="1" fill="#E2EFEA"/><rect x="16" y="11" width="4" height="13" rx="1" fill="#E2EFEA"/><rect x="24" y="5" width="4" height="19" rx="1" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-profil-brand"><title id="title-profil-brand">Profil saya</title><circle cx="16" cy="10" r="5" fill="#E2EFEA"/><path d="M6 28v-2a10 10 0 0 1 20 0v2Z" fill="#E2EFEA"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-pengguna-brand"><title id="title-pengguna-brand">Pengguna dan instansi</title><circle cx="12" cy="10" r="4" fill="#E2EFEA"/><path d="M3 27v-2a9 9 0 0 1 18 0v2Z" fill="#E2EFEA"/><path d="M22 6a4 4 0 0 1 0 8m2 5c4 0 6 3 6 7" stroke="currentColor"/><circle cx="25" cy="8" r="1.5" fill="#F2B705" stroke="none"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-masuk-brand"><title id="title-masuk-brand">Masuk</title><rect x="14" y="4" width="13" height="24" rx="3" fill="#E2EFEA"/><path d="M3 16h17m-5-5 5 5-5 5" /><path d="M23 15v2" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-keluar-brand"><title id="title-keluar-brand">Keluar</title><rect x="5" y="4" width="13" height="24" rx="3" fill="#E2EFEA"/><path d="M13 16h16m-5-5 5 5-5 5" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-daftar-akun-brand"><title id="title-daftar-akun-brand">Daftar akun</title><circle cx="12" cy="10" r="5" fill="#E2EFEA"/><path d="M3 27v-3a9 9 0 0 1 16-5" fill="#E2EFEA"/><circle cx="24" cy="23" r="5" fill="#F2B705" stroke="currentColor"/><path d="M22 23h4m-2-2v4" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-password-brand"><title id="title-password-brand">Password</title><rect x="5" y="14" width="22" height="15" rx="3" fill="#E2EFEA"/><path d="M10 14V9a6 6 0 0 1 12 0v5" /><circle cx="16" cy="21" r="1.5" fill="#F2B705" stroke="currentColor"/><path d="M16 23v2" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-admin-brand"><title id="title-admin-brand">Administrator</title><path d="M16 3 27 7v8c0 7-7 12-11 14C12 27 5 22 5 15V7Z" fill="#E2EFEA"/><path d="M12 16l3 3 5-6" /><path d="M12 7h8" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-instansi-brand"><title id="title-instansi-brand">Instansi</title><path d="M3 12 16 4l13 8Z" fill="#E2EFEA"/><path d="M5 28h22M7 24V14m6 10V14m6 10V14m6 10V14" /><circle cx="16" cy="9" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-atur-peran-brand"><title id="title-atur-peran-brand">Atur peran</title><circle cx="12" cy="9" r="4" fill="#E2EFEA"/><path d="M3 27v-3a9 9 0 0 1 13-8" fill="#E2EFEA"/><rect x="18" y="19" width="11" height="10" rx="2" fill="#FFF9EB"/><path d="M21 19v-3a2.5 2.5 0 0 1 5 0v3" /><circle cx="23.5" cy="24" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalan-brand"><title id="title-jalan-brand">Jalan</title><path d="M5 28 11 4h10l6 24" fill="#E2EFEA"/><path d="M16 7v4m0 5v4m0 5v2" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalan-berlubang-brand"><title id="title-jalan-berlubang-brand">Jalan berlubang</title><path d="M5 28 10 4m12 0 5 24M16 5v5m0 14v4" /><path d="m8 17 4-4 4 2 4-2 5 5-3 4-5-1-5 2Z" fill="#E2EFEA"/><path d="m12 18 4-1 4 1" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalan-retak-brand"><title id="title-jalan-retak-brand">Jalan rusak / retak</title><path d="M5 28 10 4m12 0 5 24" /><path d="m17 4-4 7 6 5-7 5 5 7" stroke="currentColor"/><path d="m13 11-5 1m11 4 5 1" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-trotoar-rusak-brand"><title id="title-trotoar-rusak-brand">Trotoar rusak</title><path d="M3 25h26M4 23V10h24v13" fill="#E2EFEA"/><path d="M4 16h10m6 0h8M11 10v6m10-6v6M8 16v7m16-7v7" /><path d="m17 10-3 7 5 2-3 5" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-area-berbahaya-brand"><title id="title-area-berbahaya-brand">Area berbahaya</title><path d="m14 5-11 20a2 2 0 0 0 2 3h22a2 2 0 0 0 2-3L18 5a2.3 2.3 0 0 0-4 0Z" fill="#FFF9EB"/><path d="M16 12v7" stroke="currentColor"/><circle cx="16" cy="24" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-trotoar-terhalang-brand"><title id="title-trotoar-terhalang-brand">Trotoar terhalang</title><path d="M3 27h26M7 27V12m18 15V12" /><rect x="3" y="9" width="26" height="9" rx="2" fill="#E2EFEA"/><path d="m5 17 7-7m2 8 8-8m2 8 4-4" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalur-pemandu-brand"><title id="title-jalur-pemandu-brand">Jalur pemandu rusak</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#E2EFEA"/><path d="M9 8v7m0 7v2M14 8v5m0 7v4M20 8v7m0 6v3M25 8v6m0 6v4" /><path d="m5 18 6-2 5 3 5-3 6 1" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-akses-kursi-roda-brand"><title id="title-akses-kursi-roda-brand">Akses kursi roda</title><circle cx="16" cy="5" r="2.5" fill="#F2B705" stroke="currentColor"/><path d="M15 11v9h8l4 7M16 14h7M11 16a7 7 0 1 0 10 9" /><path d="m27 27 2-1" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kamera-brand"><title id="title-kamera-brand">Ambil foto</title><path d="M4 10h6l2-4h8l2 4h6v17H4Z" fill="#E2EFEA"/><circle cx="16" cy="18" r="5" /><circle cx="25" cy="13" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-galeri-brand"><title id="title-galeri-brand">Pilih dari galeri</title><rect x="4" y="5" width="24" height="22" rx="3" fill="#E2EFEA"/><path d="m5 23 8-9 6 6 4-4 5 5" /><circle cx="22" cy="11" r="2.5" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-unggah-foto-brand"><title id="title-unggah-foto-brand">Unggah foto</title><rect x="4" y="8" width="24" height="20" rx="3" fill="#E2EFEA"/><path d="M11 7h10m-5 15V3m-5 5 5-5 5 5" /><path d="m5 25 5-5 4 4m10-4 3 3" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-ganti-foto-brand"><title id="title-ganti-foto-brand">Ganti foto</title><rect x="4" y="5" width="24" height="22" rx="3" fill="#E2EFEA"/><path d="m5 23 8-9 6 6" /><circle cx="22" cy="11" r="2" fill="#F2B705" stroke="currentColor"/><path d="m19 26 7-7 3 3-7 7-4 1Z" fill="#FFF9EB"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-foto-rusak-brand"><title id="title-foto-rusak-brand">Foto tidak tersedia</title><rect x="4" y="5" width="24" height="22" rx="3" fill="#E2EFEA"/><path d="m5 23 7-8 5 5m4-3 6 6M14 5l-3 8 8 3-3 11" /><circle cx="23" cy="11" r="1.5" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-detail-laporan-brand"><title id="title-detail-laporan-brand">Detail laporan</title><rect x="7" y="4" width="18" height="24" rx="3" fill="#E2EFEA"/><path d="M11 10h10m-10 5h7m-7 5h10" /><circle cx="23" cy="23" r="6" fill="#FFF9EB"/><path d="m27 27 3 3M23 20v4" /><circle cx="23" cy="27" r="0.6" fill="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-deskripsi-brand"><title id="title-deskripsi-brand">Deskripsi</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#E2EFEA"/><path d="M9 10h14M9 16h14M9 22h8" /><path d="M21 22h2" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-foto-sebelum-brand"><title id="title-foto-sebelum-brand">Foto sebelum</title><rect x="3" y="6" width="26" height="22" rx="3" fill="#E2EFEA"/><path d="m4 24 8-9 6 6 4-3 6 6" /><circle cx="23" cy="12" r="2" fill="#F2B705" stroke="currentColor"/><path d="M11 3H4v7m0-7 7 7" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-foto-sesudah-brand"><title id="title-foto-sesudah-brand">Foto sesudah</title><rect x="3" y="6" width="26" height="22" rx="3" fill="#E2EFEA"/><path d="m4 24 8-9 6 6 4-3 6 6" /><circle cx="23" cy="10" r="6" fill="#FFF9EB"/><path d="M19 10l3 3 5-6" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bandingkan-foto-brand"><title id="title-bandingkan-foto-brand">Perbandingan foto</title><rect x="3" y="5" width="26" height="23" rx="3" fill="#E2EFEA"/><path d="M16 3v27M4 23l7-8 5 5m1 2 5-7 6 7" /><path d="m12 10-3 3 3 3m8-6 3 3-3 3" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lokasi-brand"><title id="title-lokasi-brand">Lokasi laporan</title><path d="M16 28S6 19 6 12a10 10 0 0 1 20 0c0 7-10 16-10 16Z" fill="#E2EFEA"/><circle cx="16" cy="12" r="3.5" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lokasi-saya-brand"><title id="title-lokasi-saya-brand">Lokasi saya / GPS</title><circle cx="16" cy="16" r="9" fill="#E2EFEA"/><circle cx="16" cy="16" r="3" fill="#F2B705" stroke="currentColor"/><path d="M16 2v5m0 18v5M2 16h5m18 0h5" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-rute-brand"><title id="title-rute-brand">Buka rute</title><circle cx="7" cy="25" r="3" fill="#E2EFEA"/><path d="M10 25h13a5 5 0 0 0 0-10H10a5 5 0 0 1 0-10h12" /><path d="m19 2 4 3-4 3" stroke="currentColor"/><circle cx="26" cy="5" r="2" fill="#F2B705" stroke="none"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-wilayah-brand"><title id="title-wilayah-brand">Wilayah kewenangan</title><path d="m4 8 8-4 6 4 10-3-2 10 3 8-11 5-6-4-9 3 3-11Z" fill="#E2EFEA"/><circle cx="17" cy="16" r="4" fill="#F2B705" stroke="currentColor"/><path d="M17 22v3" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-provinsi-brand"><title id="title-provinsi-brand">Provinsi / nasional</title><path d="m4 8 8-4 6 4 10-3-2 10 3 8-11 5-6-4-9 3 3-11Z" fill="#E2EFEA"/><path d="m12 4 2 10-4 10m8-16-4 6 12 1" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kota-brand"><title id="title-kota-brand">Kabupaten / kota</title><rect x="4" y="13" width="7" height="15" rx="1" fill="#E2EFEA"/><rect x="12" y="5" width="9" height="23" rx="1" fill="#E2EFEA"/><rect x="22" y="10" width="6" height="18" rx="1" fill="#E2EFEA"/><path d="M15 10h3m-3 5h3m-3 5h3M7 18v2m18-5v2M3 28h26" /><path d="M16 25v3" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kecamatan-brand"><title id="title-kecamatan-brand">Kecamatan</title><rect x="4" y="4" width="9" height="9" rx="2" fill="#E2EFEA"/><rect x="19" y="4" width="9" height="9" rx="2" fill="#E2EFEA"/><rect x="4" y="19" width="9" height="9" rx="2" fill="#E2EFEA"/><rect x="19" y="19" width="9" height="9" rx="2" fill="#F2B705" stroke="currentColor"/><path d="M13 8h6M8 13v6m16-6v6m-11 5h6" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-desa-brand"><title id="title-desa-brand">Desa / kelurahan</title><path d="m3 16 8-7 8 7M6 14v14h11V14" fill="#E2EFEA"/><path d="m17 11 6-5 6 5m-9-2v13h6V9" fill="#E2EFEA"/><rect x="9" y="21" width="5" height="7" rx="1" fill="#FFF9EB"/><path d="M3 28h26" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-sekitar-saya-brand"><title id="title-sekitar-saya-brand">Peringatan sekitar</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><circle cx="16" cy="16" r="7" /><circle cx="16" cy="16" r="2" fill="#F2B705" stroke="currentColor"/><path d="m16 16 8-8M3 27l3-3m20 0 3 3" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-menunggu-brand"><title id="title-status-menunggu-brand">Menunggu</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M16 8v8l5 3" /><circle cx="25" cy="7" r="3" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-diverifikasi-brand"><title id="title-status-diverifikasi-brand">Diverifikasi</title><path d="M16 3 27 7v8c0 7-7 12-11 14C12 27 5 22 5 15V7Z" fill="#E2EFEA"/><path d="M12 16l3 3 5-6" /><circle cx="25" cy="7" r="3" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-diproses-brand"><title id="title-status-diproses-brand">Diproses</title><path d="M6 26 10 9h12l4 17Z" fill="#E2EFEA"/><path d="M8 18h16m-17 5h18M3 28h26" /><path d="M13 4h6" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-selesai-brand"><title id="title-status-selesai-brand">Selesai</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M12 16l3 3 5-6" /><path d="M9 6h3" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-ditolak-brand"><title id="title-status-ditolak-brand">Ditolak</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M13 13l6 6m0-6-6 6" /><path d="M9 6h3" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-prioritas-rendah-brand"><title id="title-prioritas-rendah-brand">Prioritas rendah</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#E2EFEA"/><path d="M9 12l7 7 7-7" /><path d="M11 24h10" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-prioritas-sedang-brand"><title id="title-prioritas-sedang-brand">Prioritas sedang</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#E2EFEA"/><path d="M9 13h14m-14 6h14" stroke="currentColor"/><path d="M11 25h10" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-prioritas-tinggi-brand"><title id="title-prioritas-tinggi-brand">Prioritas tinggi</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#FFF9EB"/><path d="m9 20 7-7 7 7m-14-7 7-7 7 7" /><path d="M11 26h10" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-suka-brand"><title id="title-suka-brand">Suka</title><path d="M16 27 5 17C-2 9 8 1 16 9c8-8 18 0 11 8Z" fill="#E2EFEA"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-sudah-disukai-brand"><title id="title-sudah-disukai-brand">Sudah disukai</title><path d="M16 27 5 17C-2 9 8 1 16 9c8-8 18 0 11 8Z" fill="#E2EFEA"/><path d="M12 16l3 3 5-6" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-komentar-brand"><title id="title-komentar-brand">Komentar</title><path d="M27 21a3 3 0 0 1-3 3H12l-7 5V7a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3Z" fill="#E2EFEA"/><path d="M10 11h12m-12 6h8" /><circle cx="23" cy="18" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kirim-brand"><title id="title-kirim-brand">Kirim</title><path d="M3 4 29 16 3 28l5-12Z" fill="#E2EFEA"/><path d="M8 16h21M3 4l14 12L3 28" /><path d="M21 16h5" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-validasi-masih-rusak-brand"><title id="title-validasi-masih-rusak-brand">Masih rusak</title><path d="M16 28S6 19 6 12a10 10 0 0 1 20 0c0 7-10 16-10 16Z" fill="#E2EFEA"/><circle cx="16" cy="12" r="3.5" /><path d="M16 7v6" /><circle cx="16" cy="16" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-validasi-sudah-baik-brand"><title id="title-validasi-sudah-baik-brand">Sudah diperbaiki</title><path d="M16 28S6 19 6 12a10 10 0 0 1 20 0c0 7-10 16-10 16Z" fill="#E2EFEA"/><circle cx="16" cy="12" r="3.5" /><path d="M12 12l3 3 5-6" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-linimasa-brand"><title id="title-linimasa-brand">Linimasa penanganan</title><path d="M7 8v17" /><circle cx="7" cy="7" r="3" fill="#F2B705" stroke="currentColor"/><circle cx="7" cy="16" r="2" fill="#E2EFEA"/><circle cx="7" cy="26" r="3" fill="#E2EFEA"/><path d="M14 6h13m-13 4h8m-8 5h13m-13 4h8m-8 6h13m-13 4h8" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tanggapan-admin-brand"><title id="title-tanggapan-admin-brand">Tanggapan admin</title><path d="M26 19v4H12l-7 6V6h21Z" fill="#E2EFEA"/><circle cx="24" cy="12" r="6" fill="#FFF9EB"/><path d="M20 12l3 3 5-6" /><path d="M10 11h6m-6 6h6" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tambah-perkembangan-brand"><title id="title-tambah-perkembangan-brand">Tambah perkembangan</title><rect x="7" y="4" width="18" height="24" rx="3" fill="#E2EFEA"/><path d="M11 10h10m-10 5h7m-7 5h10" /><circle cx="24" cy="24" r="5" fill="#F2B705" stroke="currentColor"/><path d="M22 24h4m-2-2v4" /><path d="M3 11v14" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-cari-brand"><title id="title-cari-brand">Cari laporan</title><circle cx="14" cy="14" r="9" fill="#E2EFEA"/><path d="m21 21 8 8" /><path d="M10 10a5 5 0 0 1 5-2" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-filter-brand"><title id="title-filter-brand">Filter</title><path d="M3 5h26L19 17v10l-6-3v-7Z" fill="#E2EFEA"/><path d="M9 10h14" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-urutkan-brand"><title id="title-urutkan-brand">Urutkan</title><path d="M8 4v24m-4-4 4 4 4-4M16 7h13m-13 8h9m-9 8h5" /><circle cx="28" cy="7" r="1.5" fill="#F2B705" stroke="none"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-muat-ulang-brand"><title id="title-muat-ulang-brand">Muat ulang</title><path d="M27 13A11 11 0 0 0 7 7L4 11m0-7v7h7M5 19a11 11 0 0 0 20 6l3-4m0 7v-7h-7" /><circle cx="16" cy="16" r="2" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-edit-brand"><title id="title-edit-brand">Edit</title><path d="m6 21 16-16a3 3 0 0 1 5 5L11 26l-7 2Z" fill="#E2EFEA"/><path d="m19 8 5 5M6 21l5 5" /><path d="M16 28h12" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-simpan-brand"><title id="title-simpan-brand">Simpan</title><path d="M5 4h19l4 4v20H4V5Z" fill="#E2EFEA"/><rect x="10" y="4" width="12" height="9" rx="1" fill="#FFF9EB"/><rect x="9" y="19" width="14" height="9" rx="1" fill="#FFF9EB"/><path d="M19 7v3" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-hapus-brand"><title id="title-hapus-brand">Hapus</title><path d="M4 9h24M11 9V5h10v4M7 9l1 19h16l1-19" fill="#E2EFEA"/><path d="M13 14v9m6-9v9" /><path d="M13 5h6" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tutup-brand"><title id="title-tutup-brand">Tutup</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M13 13l6 6m0-6-6 6" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tambah-brand"><title id="title-tambah-brand">Tambah</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M9 16h14M16 9v14" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kembali-brand"><title id="title-kembali-brand">Kembali</title><path d="m15 6-10 10 10 10M5 16h23" /><circle cx="27" cy="16" r="1.5" fill="#F2B705" stroke="none"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-panah-bawah-brand"><title id="title-panah-bawah-brand">Buka pilihan</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#E2EFEA"/><path d="m9 13 7 7 7-7" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-opsi-lain-brand"><title id="title-opsi-lain-brand">Opsi lainnya</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><circle cx="9" cy="16" r="1" fill="currentColor"/><circle cx="16" cy="16" r="1" fill="currentColor"/><circle cx="23" cy="16" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-notifikasi-brand"><title id="title-notifikasi-brand">Notifikasi</title><path d="M5 24h22l-3-5v-7a8 8 0 0 0-16 0v7Z" fill="#E2EFEA"/><path d="M13 28a3 3 0 0 0 6 0M16 2v2" /><circle cx="25" cy="7" r="4" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-notifikasi-nonaktif-brand"><title id="title-notifikasi-nonaktif-brand">Notifikasi nonaktif</title><path d="M5 24h22l-3-5v-7a8 8 0 0 0-16 0v7Z" fill="#E2EFEA"/><path d="M13 28a3 3 0 0 0 6 0M3 3l26 26" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lalu-lintas-rendah-brand"><title id="title-lalu-lintas-rendah-brand">Lalu lintas rendah</title><path d="M7 20v-8l3-5h12l3 5v8m-18-8h18m-15 4h1m10 0h1m-15 5v2m18-2v2" fill="#E2EFEA"/><path d="M7 5h5" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lalu-lintas-sedang-brand"><title id="title-lalu-lintas-sedang-brand">Lalu lintas sedang</title><path d="M7 20v-8l3-5h12l3 5v8m-18-8h18m-15 4h1m10 0h1m-15 5v2m18-2v2" fill="#E2EFEA"/><path d="M7 5h5m4 0h5" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lalu-lintas-tinggi-brand"><title id="title-lalu-lintas-tinggi-brand">Lalu lintas tinggi</title><path d="M7 20v-8l3-5h12l3 5v8m-18-8h18m-15 4h1m10 0h1m-15 5v2m18-2v2" fill="#E2EFEA"/><path d="M5 5h5m4 0h5m4 0h5" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bahaya-ringan-brand"><title id="title-bahaya-ringan-brand">Kerusakan ringan</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#E2EFEA"/><rect x="9" y="20" width="4" height="4" rx="1" fill="#F2B705" stroke="currentColor"/><path d="M17 24h1m5 0h1M9 9h14" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bahaya-sedang-brand"><title id="title-bahaya-sedang-brand">Kerusakan sedang</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#E2EFEA"/><rect x="8" y="20" width="4" height="4" rx="1" fill="#E2EFEA"/><rect x="14" y="15" width="4" height="9" rx="1" fill="#F2B705" stroke="currentColor"/><path d="M23 24h1M9 9h14" /></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bahaya-berat-brand"><title id="title-bahaya-berat-brand">Kerusakan berat</title><rect x="4" y="4" width="24" height="24" rx="3" fill="#FFF9EB"/><rect x="7" y="20" width="4" height="4" rx="1" fill="#E2EFEA"/><rect x="14" y="15" width="4" height="9" rx="1" fill="#E2EFEA"/><rect x="21" y="9" width="4" height="15" rx="1" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tanggal-brand"><title id="title-tanggal-brand">Tanggal dan waktu</title><rect x="4" y="7" width="24" height="21" rx="3" fill="#E2EFEA"/><path d="M4 14h24M10 3v8m12-8v8M10 19h4m4 0h4m-12 5h4" /><circle cx="21" cy="24" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-informasi-brand"><title id="title-informasi-brand">Informasi</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M16 14v9" /><circle cx="16" cy="9" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bantuan-brand"><title id="title-bantuan-brand">Bantuan</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M11 11a5 5 0 1 1 8 4c-3 2-3 2-3 5" /><circle cx="16" cy="25" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-unduh-brand"><title id="title-unduh-brand">Unduh</title><path d="M5 21v7h22v-7M16 3v18m-6-6 6 6 6-6" /><path d="M11 28h10" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bagikan-brand"><title id="title-bagikan-brand">Bagikan</title><path d="m10 14 12-7M10 18l12 7" /><circle cx="7" cy="16" r="4" fill="#E2EFEA"/><circle cx="25" cy="6" r="4" fill="#E2EFEA"/><circle cx="25" cy="26" r="4" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tautan-brand"><title id="title-tautan-brand">Tautan</title><path d="m13 8 3-3a8 8 0 0 1 11 11l-3 3M19 24l-3 3A8 8 0 0 1 5 16l3-3M11 21l10-10" /><path d="m15 17 2-2" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-buka-eksternal-brand"><title id="title-buka-eksternal-brand">Buka di luar aplikasi</title><path d="M17 4h11v11m0-11L14 18" /><path d="M12 6H5v22h22v-8" fill="#E2EFEA"/><path d="M24 8l4-4" stroke="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-koneksi-brand"><title id="title-koneksi-brand">Terhubung</title><path d="M3 10a20 20 0 0 1 26 0M7 15a14 14 0 0 1 18 0m-14 5a8 8 0 0 1 10 0" /><circle cx="16" cy="26" r="2" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-koneksi-terputus-brand"><title id="title-koneksi-terputus-brand">Koneksi terputus</title><path d="M3 10a20 20 0 0 1 26 0M7 15a14 14 0 0 1 18 0m-14 5a8 8 0 0 1 10 0M3 3l26 26" /><circle cx="16" cy="26" r="2" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-belum-ada-laporan-brand"><title id="title-belum-ada-laporan-brand">Belum ada laporan</title><path d="M4 11 9 5h14l5 6v17H4Z" fill="#E2EFEA"/><path d="M4 19h7l2 4h6l2-4h7M11 12h10" /><circle cx="25" cy="6" r="3" fill="#F2B705" stroke="currentColor"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-peringatan-brand"><title id="title-peringatan-brand">Peringatan / error</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M16 8v10" /><circle cx="16" cy="24" r="1" fill="#F2B705"/></svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-berhasil-brand"><title id="title-berhasil-brand">Berhasil</title><circle cx="16" cy="16" r="12" fill="#E2EFEA"/><path d="M12 16l3 3 5-6" /><path d="m25 3 1 2 3 1-3 1-1 3-1-3-3-1 3-1Z" fill="#F2B705" stroke="currentColor"/></svg>
+<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent;width:4096px}body{display:grid;grid-template-columns:repeat(8,512px);grid-auto-rows:512px}svg{display:block;width:512px;height:512px}</style></head><body><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-beranda-brand"><title id="title-beranda-brand">Beranda</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 14 16 3l13 11M7 12v16h18V12" fill="currentColor" fill-opacity="0.12"/><rect x="13" y="20" width="6" height="8" rx="1" fill="#FFF9EB"/><path d="M13 8h6" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-dashboard-brand"><title id="title-dashboard-brand">Dashboard</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="10" height="14" rx="2" fill="currentColor" fill-opacity="0.12"/><rect x="18" y="4" width="10" height="8" rx="2" fill="#F2B705" stroke="currentColor"/><rect x="18" y="16" width="10" height="12" rx="2" fill="currentColor" fill-opacity="0.12"/><rect x="4" y="22" width="10" height="6" rx="2" fill="currentColor" fill-opacity="0.12"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M91 104V96m8 8V88m8 16V93" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-peta-brand"><title id="title-peta-brand">Peta kerusakan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m3 8 8-4 10 4 8-4v21l-8 4-10-4-8 4Z" fill="currentColor" fill-opacity="0.12"/><path d="M11 4v21m10-17v21" /><circle cx="21" cy="12" r="4" fill="#F2B705" stroke="currentColor"/><circle cx="21" cy="12" r="1" fill="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 86v5m0 12v5m-11-11h5m12 0h5" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <circle cx="99" cy="97" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-buat-laporan-brand"><title id="title-buat-laporan-brand">Buat laporan</title><g transform="scale(.25)" stroke="none"><defs>
+    <clipPath id="custom-buat-laporan-brand-549"><circle cx="58" cy="48" r="27"/></clipPath>
+  </defs>
+  <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity="0.38" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="58" cy="48" r="27" fill="#FFF9EB"/>
+  <g clip-path="url(#custom-buat-laporan-brand-549)">
+    <path d="M52 20H64L80 79H36L52 20Z" fill="#0B5D4B"/>
+    <path d="M58 26V34M58 41V47M58 66V74" stroke="#FFF9EB" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M40 57L50 52L58 58L66 53L77 57" stroke="#F2B705" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity="0.8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="99" cy="97" r="22" fill="#FFF9EB"/>
+  <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="#0B5D4B" stroke-width="2.5"/>
+  <path d="M99 88V106M90 97H108" stroke="#0B5D4B" stroke-width="4.5" stroke-linecap="round"/>
+</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-daftar-laporan-brand"><title id="title-daftar-laporan-brand">Daftar laporan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M13 10h10m-10 6h10m-10 6h10" /><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="9" cy="16" r="1" fill="currentColor"/><circle cx="9" cy="22" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M91 91h16m-16 6h16m-16 6h16" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-statistik-brand"><title id="title-statistik-brand">Statistik</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M4 4v24h25" /><rect x="8" y="17" width="4" height="7" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="16" y="11" width="4" height="13" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="24" y="5" width="4" height="19" rx="1" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M91 104V96m8 8V88m8 16V93" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-profil-brand"><title id="title-profil-brand">Profil saya</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="10" r="5" fill="currentColor" fill-opacity="0.12"/><path d="M6 28v-2a10 10 0 0 1 20 0v2Z" fill="currentColor" fill-opacity="0.12"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-pengguna-brand"><title id="title-pengguna-brand">Pengguna dan instansi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="10" r="4" fill="currentColor" fill-opacity="0.12"/><path d="M3 27v-2a9 9 0 0 1 18 0v2Z" fill="currentColor" fill-opacity="0.12"/><path d="M22 6a4 4 0 0 1 0 8m2 5c4 0 6 3 6 7" stroke="currentColor"/><circle cx="25" cy="8" r="1.5" fill="#F2B705" stroke="none"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-masuk-brand"><title id="title-masuk-brand">Masuk</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="14" y="4" width="13" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M3 16h17m-5-5 5 5-5 5" /><path d="M23 15v2" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-keluar-brand"><title id="title-keluar-brand">Keluar</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="5" y="4" width="13" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M13 16h16m-5-5 5 5-5 5" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M109 97H90m7-7-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-daftar-akun-brand"><title id="title-daftar-akun-brand">Daftar akun</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="10" r="5" fill="currentColor" fill-opacity="0.12"/><path d="M3 27v-3a9 9 0 0 1 16-5" fill="currentColor" fill-opacity="0.12"/><circle cx="24" cy="23" r="5" fill="#F2B705" stroke="currentColor"/><path d="M22 23h4m-2-2v4" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-password-brand"><title id="title-password-brand">Password</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="5" y="14" width="22" height="15" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M10 14V9a6 6 0 0 1 12 0v5" /><circle cx="16" cy="21" r="1.5" fill="#F2B705" stroke="currentColor"/><path d="M16 23v2" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-admin-brand"><title id="title-admin-brand">Administrator</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M16 3 27 7v8c0 7-7 12-11 14C12 27 5 22 5 15V7Z" fill="currentColor" fill-opacity="0.12"/><path d="M12 16l3 3 5-6" /><path d="M12 7h8" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-instansi-brand"><title id="title-instansi-brand">Instansi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 12 16 4l13 8Z" fill="currentColor" fill-opacity="0.12"/><path d="M5 28h22M7 24V14m6 10V14m6 10V14m6 10V14" /><circle cx="16" cy="9" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-atur-peran-brand"><title id="title-atur-peran-brand">Atur peran</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="9" r="4" fill="currentColor" fill-opacity="0.12"/><path d="M3 27v-3a9 9 0 0 1 13-8" fill="currentColor" fill-opacity="0.12"/><rect x="18" y="19" width="11" height="10" rx="2" fill="#FFF9EB"/><path d="M21 19v-3a2.5 2.5 0 0 1 5 0v3" /><circle cx="23.5" cy="24" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m91 101 12-12 5 5-12 12-6 1Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalan-brand"><title id="title-jalan-brand">Jalan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 28 11 4h10l6 24" fill="currentColor" fill-opacity="0.12"/><path d="M16 7v4m0 5v4m0 5v2" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalan-berlubang-brand"><title id="title-jalan-berlubang-brand">Jalan berlubang</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 28 10 4m12 0 5 24M16 5v5m0 14v4" /><path d="m8 17 4-4 4 2 4-2 5 5-3 4-5-1-5 2Z" fill="currentColor" fill-opacity="0.12"/><path d="m12 18 4-1 4 1" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalan-retak-brand"><title id="title-jalan-retak-brand">Jalan rusak / retak</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 28 10 4m12 0 5 24" /><path d="m17 4-4 7 6 5-7 5 5 7" stroke="currentColor"/><path d="m13 11-5 1m11 4 5 1" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-trotoar-rusak-brand"><title id="title-trotoar-rusak-brand">Trotoar rusak</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 25h26M4 23V10h24v13" fill="currentColor" fill-opacity="0.12"/><path d="M4 16h10m6 0h8M11 10v6m10-6v6M8 16v7m16-7v7" /><path d="m17 10-3 7 5 2-3 5" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-area-berbahaya-brand"><title id="title-area-berbahaya-brand">Area berbahaya</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m14 5-11 20a2 2 0 0 0 2 3h22a2 2 0 0 0 2-3L18 5a2.3 2.3 0 0 0-4 0Z" fill="#FFF9EB"/><path d="M16 12v7" stroke="currentColor"/><circle cx="16" cy="24" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-trotoar-terhalang-brand"><title id="title-trotoar-terhalang-brand">Trotoar terhalang</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 27h26M7 27V12m18 15V12" /><rect x="3" y="9" width="26" height="9" rx="2" fill="currentColor" fill-opacity="0.12"/><path d="m5 17 7-7m2 8 8-8m2 8 4-4" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-jalur-pemandu-brand"><title id="title-jalur-pemandu-brand">Jalur pemandu rusak</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M9 8v7m0 7v2M14 8v5m0 7v4M20 8v7m0 6v3M25 8v6m0 6v4" /><path d="m5 18 6-2 5 3 5-3 6 1" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-akses-kursi-roda-brand"><title id="title-akses-kursi-roda-brand">Akses kursi roda</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="5" r="2.5" fill="#F2B705" stroke="currentColor"/><path d="M15 11v9h8l4 7M16 14h7M11 16a7 7 0 1 0 10 9" /><path d="m27 27 2-1" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kamera-brand"><title id="title-kamera-brand">Ambil foto</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M4 10h6l2-4h8l2 4h6v17H4Z" fill="currentColor" fill-opacity="0.12"/><circle cx="16" cy="18" r="5" /><circle cx="25" cy="13" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-galeri-brand"><title id="title-galeri-brand">Pilih dari galeri</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="5" width="24" height="22" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="m5 23 8-9 6 6 4-4 5 5" /><circle cx="22" cy="11" r="2.5" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-unggah-foto-brand"><title id="title-unggah-foto-brand">Unggah foto</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="8" width="24" height="20" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M11 7h10m-5 15V3m-5 5 5-5 5 5" /><path d="m5 25 5-5 4 4m10-4 3 3" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 107V88m-7 7 7-7 7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-ganti-foto-brand"><title id="title-ganti-foto-brand">Ganti foto</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="5" width="24" height="22" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="m5 23 8-9 6 6" /><circle cx="22" cy="11" r="2" fill="#F2B705" stroke="currentColor"/><path d="m19 26 7-7 3 3-7 7-4 1Z" fill="#FFF9EB"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M107 94a9 9 0 1 0-2 10m3-16v7h-7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-foto-rusak-brand"><title id="title-foto-rusak-brand">Foto tidak tersedia</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="5" width="24" height="22" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="m5 23 7-8 5 5m4-3 6 6M14 5l-3 8 8 3-3 11" /><circle cx="23" cy="11" r="1.5" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-detail-laporan-brand"><title id="title-detail-laporan-brand">Detail laporan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="7" y="4" width="18" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M11 10h10m-10 5h7m-7 5h10" /><circle cx="23" cy="23" r="6" fill="#FFF9EB"/><path d="m27 27 3 3M23 20v4" /><circle cx="23" cy="27" r="0.6" fill="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-deskripsi-brand"><title id="title-deskripsi-brand">Deskripsi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M9 10h14M9 16h14M9 22h8" /><path d="M21 22h2" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m91 101 12-12 5 5-12 12-6 1Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-foto-sebelum-brand"><title id="title-foto-sebelum-brand">Foto sebelum</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="3" y="6" width="26" height="22" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="m4 24 8-9 6 6 4-3 6 6" /><circle cx="23" cy="12" r="2" fill="#F2B705" stroke="currentColor"/><path d="M11 3H4v7m0-7 7 7" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M109 97H90m7-7-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-foto-sesudah-brand"><title id="title-foto-sesudah-brand">Foto sesudah</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="3" y="6" width="26" height="22" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="m4 24 8-9 6 6 4-3 6 6" /><circle cx="23" cy="10" r="6" fill="#FFF9EB"/><path d="M19 10l3 3 5-6" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bandingkan-foto-brand"><title id="title-bandingkan-foto-brand">Perbandingan foto</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="3" y="5" width="26" height="23" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M16 3v27M4 23l7-8 5 5m1 2 5-7 6 7" /><path d="m12 10-3 3 3 3m8-6 3 3-3 3" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M87 97s5-7 12-7 12 7 12 7-5 7-12 7-12-7-12-7Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    <circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lokasi-brand"><title id="title-lokasi-brand">Lokasi laporan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M16 28S6 19 6 12a10 10 0 0 1 20 0c0 7-10 16-10 16Z" fill="currentColor" fill-opacity="0.12"/><circle cx="16" cy="12" r="3.5" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 108s-9-8-9-14a9 9 0 0 1 18 0c0 6-9 14-9 14Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    <circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lokasi-saya-brand"><title id="title-lokasi-saya-brand">Lokasi saya / GPS</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="9" fill="currentColor" fill-opacity="0.12"/><circle cx="16" cy="16" r="3" fill="#F2B705" stroke="currentColor"/><path d="M16 2v5m0 18v5M2 16h5m18 0h5" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 86v5m0 12v5m-11-11h5m12 0h5" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    <circle cx="99" cy="97" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-rute-brand"><title id="title-rute-brand">Buka rute</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="7" cy="25" r="3" fill="currentColor" fill-opacity="0.12"/><path d="M10 25h13a5 5 0 0 0 0-10H10a5 5 0 0 1 0-10h12" /><path d="m19 2 4 3-4 3" stroke="currentColor"/><circle cx="26" cy="5" r="2" fill="#F2B705" stroke="none"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-wilayah-brand"><title id="title-wilayah-brand">Wilayah kewenangan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m4 8 8-4 6 4 10-3-2 10 3 8-11 5-6-4-9 3 3-11Z" fill="currentColor" fill-opacity="0.12"/><circle cx="17" cy="16" r="4" fill="#F2B705" stroke="currentColor"/><path d="M17 22v3" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 108s-9-8-9-14a9 9 0 0 1 18 0c0 6-9 14-9 14Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    <circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-provinsi-brand"><title id="title-provinsi-brand">Provinsi / nasional</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m4 8 8-4 6 4 10-3-2 10 3 8-11 5-6-4-9 3 3-11Z" fill="currentColor" fill-opacity="0.12"/><path d="m12 4 2 10-4 10m8-16-4 6 12 1" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 108s-9-8-9-14a9 9 0 0 1 18 0c0 6-9 14-9 14Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    <circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kota-brand"><title id="title-kota-brand">Kabupaten / kota</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="13" width="7" height="15" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="12" y="5" width="9" height="23" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="22" y="10" width="6" height="18" rx="1" fill="currentColor" fill-opacity="0.12"/><path d="M15 10h3m-3 5h3m-3 5h3M7 18v2m18-5v2M3 28h26" /><path d="M16 25v3" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 108s-9-8-9-14a9 9 0 0 1 18 0c0 6-9 14-9 14Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    <circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kecamatan-brand"><title id="title-kecamatan-brand">Kecamatan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="9" height="9" rx="2" fill="currentColor" fill-opacity="0.12"/><rect x="19" y="4" width="9" height="9" rx="2" fill="currentColor" fill-opacity="0.12"/><rect x="4" y="19" width="9" height="9" rx="2" fill="currentColor" fill-opacity="0.12"/><rect x="19" y="19" width="9" height="9" rx="2" fill="#F2B705" stroke="currentColor"/><path d="M13 8h6M8 13v6m16-6v6m-11 5h6" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 108s-9-8-9-14a9 9 0 0 1 18 0c0 6-9 14-9 14Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    <circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-desa-brand"><title id="title-desa-brand">Desa / kelurahan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m3 16 8-7 8 7M6 14v14h11V14" fill="currentColor" fill-opacity="0.12"/><path d="m17 11 6-5 6 5m-9-2v13h6V9" fill="currentColor" fill-opacity="0.12"/><rect x="9" y="21" width="5" height="7" rx="1" fill="#FFF9EB"/><path d="M3 28h26" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 108s-9-8-9-14a9 9 0 0 1 18 0c0 6-9 14-9 14Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    <circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-sekitar-saya-brand"><title id="title-sekitar-saya-brand">Peringatan sekitar</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><circle cx="16" cy="16" r="7" /><circle cx="16" cy="16" r="2" fill="#F2B705" stroke="currentColor"/><path d="m16 16 8-8M3 27l3-3m20 0 3 3" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-menunggu-brand"><title id="title-status-menunggu-brand">Menunggu</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M16 8v8l5 3" /><circle cx="25" cy="7" r="3" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v11l7 4" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-diverifikasi-brand"><title id="title-status-diverifikasi-brand">Diverifikasi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M16 3 27 7v8c0 7-7 12-11 14C12 27 5 22 5 15V7Z" fill="currentColor" fill-opacity="0.12"/><path d="M12 16l3 3 5-6" /><circle cx="25" cy="7" r="3" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-diproses-brand"><title id="title-status-diproses-brand">Diproses</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M6 26 10 9h12l4 17Z" fill="currentColor" fill-opacity="0.12"/><path d="M8 18h16m-17 5h18M3 28h26" /><path d="M13 4h6" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M107 94a9 9 0 1 0-2 10m3-16v7h-7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-selesai-brand"><title id="title-status-selesai-brand">Selesai</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M12 16l3 3 5-6" /><path d="M9 6h3" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-status-ditolak-brand"><title id="title-status-ditolak-brand">Ditolak</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M13 13l6 6m0-6-6 6" /><path d="M9 6h3" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m92 90 14 14m0-14-14 14" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-prioritas-rendah-brand"><title id="title-prioritas-rendah-brand">Prioritas rendah</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M9 12l7 7 7-7" /><path d="M11 24h10" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v19m-7-7 7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-prioritas-sedang-brand"><title id="title-prioritas-sedang-brand">Prioritas sedang</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M9 13h14m-14 6h14" stroke="currentColor"/><path d="M11 25h10" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-prioritas-tinggi-brand"><title id="title-prioritas-tinggi-brand">Prioritas tinggi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="#FFF9EB"/><path d="m9 20 7-7 7 7m-14-7 7-7 7 7" /><path d="M11 26h10" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 107V88m-7 7 7-7 7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-suka-brand"><title id="title-suka-brand">Suka</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M16 27 5 17C-2 9 8 1 16 9c8-8 18 0 11 8Z" fill="currentColor" fill-opacity="0.12"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-sudah-disukai-brand"><title id="title-sudah-disukai-brand">Sudah disukai</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M16 27 5 17C-2 9 8 1 16 9c8-8 18 0 11 8Z" fill="currentColor" fill-opacity="0.12"/><path d="M12 16l3 3 5-6" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-komentar-brand"><title id="title-komentar-brand">Komentar</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M27 21a3 3 0 0 1-3 3H12l-7 5V7a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3Z" fill="currentColor" fill-opacity="0.12"/><path d="M10 11h12m-12 6h8" /><circle cx="23" cy="18" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M91 91h16m-16 6h16m-16 6h16" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kirim-brand"><title id="title-kirim-brand">Kirim</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 4 29 16 3 28l5-12Z" fill="currentColor" fill-opacity="0.12"/><path d="M8 16h21M3 4l14 12L3 28" /><path d="M21 16h5" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-validasi-masih-rusak-brand"><title id="title-validasi-masih-rusak-brand">Masih rusak</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M16 28S6 19 6 12a10 10 0 0 1 20 0c0 7-10 16-10 16Z" fill="currentColor" fill-opacity="0.12"/><circle cx="16" cy="12" r="3.5" /><path d="M16 7v6" /><circle cx="16" cy="16" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-validasi-sudah-baik-brand"><title id="title-validasi-sudah-baik-brand">Sudah diperbaiki</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M16 28S6 19 6 12a10 10 0 0 1 20 0c0 7-10 16-10 16Z" fill="currentColor" fill-opacity="0.12"/><circle cx="16" cy="12" r="3.5" /><path d="M12 12l3 3 5-6" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-linimasa-brand"><title id="title-linimasa-brand">Linimasa penanganan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M7 8v17" /><circle cx="7" cy="7" r="3" fill="#F2B705" stroke="currentColor"/><circle cx="7" cy="16" r="2" fill="currentColor" fill-opacity="0.12"/><circle cx="7" cy="26" r="3" fill="currentColor" fill-opacity="0.12"/><path d="M14 6h13m-13 4h8m-8 5h13m-13 4h8m-8 6h13m-13 4h8" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v11l7 4" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tanggapan-admin-brand"><title id="title-tanggapan-admin-brand">Tanggapan admin</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M26 19v4H12l-7 6V6h21Z" fill="currentColor" fill-opacity="0.12"/><circle cx="24" cy="12" r="6" fill="#FFF9EB"/><path d="M20 12l3 3 5-6" /><path d="M10 11h6m-6 6h6" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tambah-perkembangan-brand"><title id="title-tambah-perkembangan-brand">Tambah perkembangan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="7" y="4" width="18" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M11 10h10m-10 5h7m-7 5h10" /><circle cx="24" cy="24" r="5" fill="#F2B705" stroke="currentColor"/><path d="M22 24h4m-2-2v4" /><path d="M3 11v14" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-cari-brand"><title id="title-cari-brand">Cari laporan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="14" cy="14" r="9" fill="currentColor" fill-opacity="0.12"/><path d="m21 21 8 8" /><path d="M10 10a5 5 0 0 1 5-2" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M87 97s5-7 12-7 12 7 12 7-5 7-12 7-12-7-12-7Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    <circle cx="99" cy="95" r="2" fill="currentColor" stroke="none"/>
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-filter-brand"><title id="title-filter-brand">Filter</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 5h26L19 17v10l-6-3v-7Z" fill="currentColor" fill-opacity="0.12"/><path d="M9 10h14" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v19m-7-7 7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-urutkan-brand"><title id="title-urutkan-brand">Urutkan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M8 4v24m-4-4 4 4 4-4M16 7h13m-13 8h9m-9 8h5" /><circle cx="28" cy="7" r="1.5" fill="#F2B705" stroke="none"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v19m-7-7 7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-muat-ulang-brand"><title id="title-muat-ulang-brand">Muat ulang</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M27 13A11 11 0 0 0 7 7L4 11m0-7v7h7M5 19a11 11 0 0 0 20 6l3-4m0 7v-7h-7" /><circle cx="16" cy="16" r="2" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M107 94a9 9 0 1 0-2 10m3-16v7h-7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-edit-brand"><title id="title-edit-brand">Edit</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m6 21 16-16a3 3 0 0 1 5 5L11 26l-7 2Z" fill="currentColor" fill-opacity="0.12"/><path d="m19 8 5 5M6 21l5 5" /><path d="M16 28h12" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m91 101 12-12 5 5-12 12-6 1Z" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-simpan-brand"><title id="title-simpan-brand">Simpan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 4h19l4 4v20H4V5Z" fill="currentColor" fill-opacity="0.12"/><rect x="10" y="4" width="12" height="9" rx="1" fill="#FFF9EB"/><rect x="9" y="19" width="14" height="9" rx="1" fill="#FFF9EB"/><path d="M19 7v3" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-hapus-brand"><title id="title-hapus-brand">Hapus</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M4 9h24M11 9V5h10v4M7 9l1 19h16l1-19" fill="currentColor" fill-opacity="0.12"/><path d="M13 14v9m6-9v9" /><path d="M13 5h6" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m92 90 14 14m0-14-14 14" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tutup-brand"><title id="title-tutup-brand">Tutup</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M13 13l6 6m0-6-6 6" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m92 90 14 14m0-14-14 14" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tambah-brand"><title id="title-tambah-brand">Tambah</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M9 16h14M16 9v14" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-kembali-brand"><title id="title-kembali-brand">Kembali</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m15 6-10 10 10 10M5 16h23" /><circle cx="27" cy="16" r="1.5" fill="#F2B705" stroke="none"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M109 97H90m7-7-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-panah-bawah-brand"><title id="title-panah-bawah-brand">Buka pilihan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="m9 13 7 7 7-7" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v19m-7-7 7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-opsi-lain-brand"><title id="title-opsi-lain-brand">Opsi lainnya</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><circle cx="9" cy="16" r="1" fill="currentColor"/><circle cx="16" cy="16" r="1" fill="currentColor"/><circle cx="23" cy="16" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M91 91h16m-16 6h16m-16 6h16" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-notifikasi-brand"><title id="title-notifikasi-brand">Notifikasi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 24h22l-3-5v-7a8 8 0 0 0-16 0v7Z" fill="currentColor" fill-opacity="0.12"/><path d="M13 28a3 3 0 0 0 6 0M16 2v2" /><circle cx="25" cy="7" r="4" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-notifikasi-nonaktif-brand"><title id="title-notifikasi-nonaktif-brand">Notifikasi nonaktif</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 24h22l-3-5v-7a8 8 0 0 0-16 0v7Z" fill="currentColor" fill-opacity="0.12"/><path d="M13 28a3 3 0 0 0 6 0M3 3l26 26" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m92 90 14 14m0-14-14 14" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lalu-lintas-rendah-brand"><title id="title-lalu-lintas-rendah-brand">Lalu lintas rendah</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M7 20v-8l3-5h12l3 5v8m-18-8h18m-15 4h1m10 0h1m-15 5v2m18-2v2" fill="currentColor" fill-opacity="0.12"/><path d="M7 5h5" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lalu-lintas-sedang-brand"><title id="title-lalu-lintas-sedang-brand">Lalu lintas sedang</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M7 20v-8l3-5h12l3 5v8m-18-8h18m-15 4h1m10 0h1m-15 5v2m18-2v2" fill="currentColor" fill-opacity="0.12"/><path d="M7 5h5m4 0h5" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-lalu-lintas-tinggi-brand"><title id="title-lalu-lintas-tinggi-brand">Lalu lintas tinggi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M7 20v-8l3-5h12l3 5v8m-18-8h18m-15 4h1m10 0h1m-15 5v2m18-2v2" fill="currentColor" fill-opacity="0.12"/><path d="M5 5h5m4 0h5m4 0h5" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bahaya-ringan-brand"><title id="title-bahaya-ringan-brand">Kerusakan ringan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><rect x="9" y="20" width="4" height="4" rx="1" fill="#F2B705" stroke="currentColor"/><path d="M17 24h1m5 0h1M9 9h14" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bahaya-sedang-brand"><title id="title-bahaya-sedang-brand">Kerusakan sedang</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="currentColor" fill-opacity="0.12"/><rect x="8" y="20" width="4" height="4" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="14" y="15" width="4" height="9" rx="1" fill="#F2B705" stroke="currentColor"/><path d="M23 24h1M9 9h14" /></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bahaya-berat-brand"><title id="title-bahaya-berat-brand">Kerusakan berat</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="4" width="24" height="24" rx="3" fill="#FFF9EB"/><rect x="7" y="20" width="4" height="4" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="14" y="15" width="4" height="9" rx="1" fill="currentColor" fill-opacity="0.12"/><rect x="21" y="9" width="4" height="15" rx="1" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tanggal-brand"><title id="title-tanggal-brand">Tanggal dan waktu</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="4" y="7" width="24" height="21" rx="3" fill="currentColor" fill-opacity="0.12"/><path d="M4 14h24M10 3v8m12-8v8M10 19h4m4 0h4m-12 5h4" /><circle cx="21" cy="24" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v11l7 4" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-informasi-brand"><title id="title-informasi-brand">Informasi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M16 14v9" /><circle cx="16" cy="9" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bantuan-brand"><title id="title-bantuan-brand">Bantuan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M11 11a5 5 0 1 1 8 4c-3 2-3 2-3 5" /><circle cx="16" cy="25" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 96v10m0-18v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-unduh-brand"><title id="title-unduh-brand">Unduh</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 21v7h22v-7M16 3v18m-6-6 6 6 6-6" /><path d="M11 28h10" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v19m-7-7 7 7 7-7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-bagikan-brand"><title id="title-bagikan-brand">Bagikan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m10 14 12-7M10 18l12 7" /><circle cx="7" cy="16" r="4" fill="currentColor" fill-opacity="0.12"/><circle cx="25" cy="6" r="4" fill="currentColor" fill-opacity="0.12"/><circle cx="25" cy="26" r="4" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-tautan-brand"><title id="title-tautan-brand">Tautan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="m13 8 3-3a8 8 0 0 1 11 11l-3 3M19 24l-3 3A8 8 0 0 1 5 16l3-3M11 21l10-10" /><path d="m15 17 2-2" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-buka-eksternal-brand"><title id="title-buka-eksternal-brand">Buka di luar aplikasi</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M17 4h11v11m0-11L14 18" /><path d="M12 6H5v22h22v-8" fill="currentColor" fill-opacity="0.12"/><path d="M24 8l4-4" stroke="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M89 97h19m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-koneksi-brand"><title id="title-koneksi-brand">Terhubung</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 10a20 20 0 0 1 26 0M7 15a14 14 0 0 1 18 0m-14 5a8 8 0 0 1 10 0" /><circle cx="16" cy="26" r="2" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-koneksi-terputus-brand"><title id="title-koneksi-terputus-brand">Koneksi terputus</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 10a20 20 0 0 1 26 0M7 15a14 14 0 0 1 18 0m-14 5a8 8 0 0 1 10 0M3 3l26 26" /><circle cx="16" cy="26" r="2" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m92 90 14 14m0-14-14 14" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-belum-ada-laporan-brand"><title id="title-belum-ada-laporan-brand">Belum ada laporan</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M4 11 9 5h14l5 6v17H4Z" fill="currentColor" fill-opacity="0.12"/><path d="M4 19h7l2 4h6l2-4h7M11 12h10" /><circle cx="25" cy="6" r="3" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 88v18m-9-9h18" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-peringatan-brand"><title id="title-peringatan-brand">Peringatan / error</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M16 8v10" /><circle cx="16" cy="24" r="1" fill="#F2B705"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M99 87v12m0 6v.2" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" color="#0B5D4B" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-berhasil-brand"><title id="title-berhasil-brand">Berhasil</title><g transform="scale(.25)" stroke-linecap="round" stroke-linejoin="round" color="#0B5D4B">
+    <path d="M58 8C34.25 8 15 26.8 15 50.3C15 77.4 58 117 58 117S101 77.4 101 50.3C101 26.8 81.75 8 58 8Z" fill="#0B5D4B" stroke="#06372D" stroke-width="2.5"/>
+    <path d="M26 43C28.5 29.7 38.3 20.3 50 18.3" stroke="#E2EFEA" stroke-opacity=".38" stroke-width="3"/>
+    <circle cx="58" cy="48" r="27" fill="#FFF9EB" stroke="none"/>
+    <g transform="translate(34 24) scale(1.5)" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="16" cy="16" r="12" fill="currentColor" fill-opacity="0.12"/><path d="M12 16l3 3 5-6" /><path d="m25 3 1 2 3 1-3 1-1 3-1-3-3-1 3-1Z" fill="#F2B705" stroke="currentColor"/></g>
+    <path d="M49 88L58 96L67 88" stroke="#E2EFEA" stroke-opacity=".8" stroke-width="2.5" fill="none"/>
+    <circle cx="99" cy="97" r="22" fill="#FFF9EB" stroke="none"/>
+    <circle cx="99" cy="97" r="18.5" fill="#F2B705" stroke="currentColor" stroke-width="2.5"/>
+    <path d="m90 97 6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"/>
+    
+    
+  </g></svg>
 </body></html>

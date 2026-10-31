@@ -1,10 +1,12 @@
 {
-  "svgXmlValid": true,
-  "svgFiles": 182,
+  "concept": "Approved custom green pin, cream inset and yellow badge",
   "nonEmptyRasters": true,
+  "svgXmlAndReferencesValid": true,
+  "svgFiles": 182,
+  "allSvgUsePinConcept": true,
+  "version": "2.0.0",
+  "transparentUncroppedEdges": true,
+  "pngSize": "512 x 512",
   "pngFiles": 182,
-  "iconDesigns": 91,
-  "pngSize": "256 x 256",
-  "transparentCorners": true,
-  "groups": 10
+  "iconDesigns": 91
 }

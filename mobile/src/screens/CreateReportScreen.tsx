@@ -24,7 +24,7 @@ import type { AiResult, Category, Traffic } from '../lib/types';
 function Chip({ label, active, onPress, icon }: { label: string; active: boolean; onPress: () => void; icon?: IconName }) {
   return (
     <Pressable onPress={onPress} style={[styles.chip, active && styles.chipActive]}>
-      {!!icon && <Icon name={icon} size={16} color={active ? '#fff' : colors.ink} />}
+      {!!icon && <Icon name={icon} size={25} />}
       <Text style={[styles.chipText, active && { color: '#fff' }]}>{label}</Text>
     </Pressable>
   );
@@ -171,7 +171,7 @@ export function CreateReportScreen() {
           <Image source={{ uri: imageUri }} style={styles.preview} />
         ) : (
           <View style={[styles.preview, styles.placeholder]}>
-            <Icon name="kamera" size={48} color={colors.primary} />
+            <Icon name="kamera" size={74} />
             <Text style={{ color: colors.ink, marginTop: 6, fontWeight: '700', fontSize: 16 }}>Mulai dari foto kerusakan</Text>
             <Text style={{ color: colors.muted, fontSize: 12 }}>Jalan, trotoar, atau akses disabilitas</Text>
           </View>
@@ -179,11 +179,11 @@ export function CreateReportScreen() {
 
         <View style={styles.row}>
           <Pressable style={[styles.pickBtn, { flex: 1 }]} onPress={() => pick('camera')}>
-            <Icon name="kamera" size={20} color={colors.ink} />
+            <Icon name="kamera" size={31} />
             <Text style={styles.pickText}>Kamera</Text>
           </Pressable>
           <Pressable style={[styles.pickBtn, { flex: 1 }]} onPress={() => pick('gallery')}>
-            <Icon name="galeri" size={20} color={colors.ink} />
+            <Icon name="galeri" size={31} />
             <Text style={styles.pickText}>Galeri</Text>
           </Pressable>
         </View>
@@ -196,7 +196,7 @@ export function CreateReportScreen() {
         )}
         {ai && (
           <View style={styles.aiBox}>
-            <Icon name="informasi" size={20} color={colors.primary} />
+            <Icon name="informasi" size={31} />
             <View style={{ flex: 1 }}>
               <Text style={styles.aiTitle}>
                 Saran AI:{' '}
@@ -275,7 +275,7 @@ export function CreateReportScreen() {
           {locating ? (
             <ActivityIndicator size="small" color={colors.primary} />
           ) : (
-            <Icon name="lokasi-saya" size={18} color={colors.primary} />
+            <Icon name="lokasi-saya" size={28} />
           )}
           <Text style={styles.pickText}>{coords ? 'Perbarui lokasi saat ini' : 'Gunakan lokasi saat ini'}</Text>
         </Pressable>

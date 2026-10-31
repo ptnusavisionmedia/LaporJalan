@@ -26,12 +26,12 @@ export function ProfileScreen() {
         <Text style={[styles.sub, { color: '#C9CCE8' }]}>Warga pelapor</Text>
       </View>
       <Pressable onPress={confirmLogout} style={styles.logout}>
-        <Icon name="keluar" size={20} color={colors.danger} />
+        <Icon name="keluar" size={31} />
         <Text style={{ color: colors.danger, fontFamily: fonts.displayBold }}>Keluar</Text>
       </Pressable>
     </View>
     <View style={styles.alertRow}>
-      <Icon name="sekitar-saya" size={26} color={colors.ink} />
+      <Icon name="sekitar-saya" size={40} />
       <View style={{ flex: 1 }}>
         <Text style={[styles.name, { fontSize: 15 }]}>Peringatan area berbahaya</Text>
         <Text style={styles.sub}>Diberi tahu saat dalam 200 m dari kerusakan berbahaya (aplikasi terbuka).</Text>
