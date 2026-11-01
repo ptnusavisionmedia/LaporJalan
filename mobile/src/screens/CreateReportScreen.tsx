@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {
   ActivityIndicator,
-  Alert,
   Image,
   KeyboardAvoidingView,
   Platform,
@@ -12,6 +11,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import { alert } from '../components/Dialog';
 import { Icon, type IconName } from '../components/Icon';
 import * as ImagePicker from 'expo-image-picker';
 import * as Location from 'expo-location';
@@ -52,7 +52,7 @@ export function CreateReportScreen() {
     setLocating(true);
     try {
       const perm = await Location.requestForegroundPermissionsAsync();
-      if (perm.status !== 'granted') return Alert.alert('Izin lokasi ditolak', 'Isi alamat secara manual.');
+      if (perm.status !== 'granted') return alert('Izin lokasi ditolak', 'Isi alamat secara manual.');
       const pos = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
       setCoords({ latitude: pos.coords.latitude, longitude: pos.coords.longitude });
       const [place] = await Location.reverseGeocodeAsync(pos.coords);
@@ -68,7 +68,7 @@ export function CreateReportScreen() {
         });
       }
     } catch {
-      Alert.alert('Gagal mengambil lokasi', 'Isi alamat secara manual.');
+      alert('Gagal mengambil lokasi', 'Isi alamat secara manual.');
     } finally {
       setLocating(false);
     }
@@ -92,7 +92,7 @@ export function CreateReportScreen() {
       source === 'camera'
         ? await ImagePicker.requestCameraPermissionsAsync()
         : await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (!perm.granted) return Alert.alert('Izin diperlukan', 'Berikan izin di pengaturan perangkat.');
+    if (!perm.granted) return alert('Izin diperlukan', 'Berikan izin di pengaturan perangkat.');
     const opts: ImagePicker.ImagePickerOptions = { mediaTypes: ['images'], quality: 0.6, base64: true };
     const res =
       source === 'camera' ? await ImagePicker.launchCameraAsync(opts) : await ImagePicker.launchImageLibraryAsync(opts);
@@ -120,8 +120,8 @@ export function CreateReportScreen() {
   };
 
   const submit = async () => {
-    if (!imageUri || !imageBase64) return Alert.alert('Foto belum ada', 'Ambil foto kerusakan terlebih dahulu.');
-    if (title.trim().length < 3) return Alert.alert('Judul terlalu pendek', 'Isi judul minimal 3 karakter.');
+    if (!imageUri || !imageBase64) return alert('Foto belum ada', 'Ambil foto kerusakan terlebih dahulu.');
+    if (title.trim().length < 3) return alert('Judul terlalu pendek', 'Isi judul minimal 3 karakter.');
     setBusy(true);
     try {
       await createReport({
@@ -143,10 +143,10 @@ export function CreateReportScreen() {
         ai,
       });
       reset();
-      Alert.alert('Terkirim', 'Laporanmu sudah masuk dan menunggu diverifikasi admin.');
+      alert('Terkirim', 'Laporanmu sudah masuk dan menunggu diverifikasi admin.');
       nav.navigate('Beranda');
     } catch (e) {
-      Alert.alert('Gagal mengirim', e instanceof Error ? e.message : 'Coba lagi.');
+      alert('Gagal mengirim', e instanceof Error ? e.message : 'Coba lagi.');
     } finally {
       setBusy(false);
     }

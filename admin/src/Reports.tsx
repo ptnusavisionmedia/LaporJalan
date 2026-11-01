@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { Icon } from './Icons'
 import { ReportImage } from './ReportImage'
 import { Select } from './Select'
 import {
@@ -80,10 +81,20 @@ export function Reports({
       <h2>Kelola Laporan</h2>
       <div className="seg" role="tablist">
         <button role="tab" aria-selected={tab === 'belum'} className={tab === 'belum' ? 'on' : ''} onClick={() => setTab('belum')}>
-          Belum selesai <span className="seg-n">{belumCount}</span>
+          <Icon name="pending" />
+          <span className="seg-t">
+            Belum selesai
+            <small>Perlu ditangani</small>
+          </span>
+          <span className="seg-n">{belumCount}</span>
         </button>
         <button role="tab" aria-selected={tab === 'selesai'} className={tab === 'selesai' ? 'on' : ''} onClick={() => setTab('selesai')}>
-          Sudah selesai <span className="seg-n">{doneCount}</span>
+          <Icon name="done" />
+          <span className="seg-t">
+            Sudah selesai
+            <small>Sudah diperbaiki</small>
+          </span>
+          <span className="seg-n">{doneCount}</span>
         </button>
       </div>
       <div className="toolbar">

@@ -6,6 +6,8 @@ const ids = {
   chart: 'lj-statistik',
   users: 'lj-pengguna',
   logout: 'lj-keluar',
+  pending: 'lj-status-diproses',
+  done: 'lj-status-selesai',
 } as const
 
 export function Icon({ name }: { name: keyof typeof ids }) {

@@ -5,6 +5,7 @@ import { PlatformPressable } from '@react-navigation/elements';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon, Logo, type IconName } from './src/components/Icon';
+import { DialogHost } from './src/components/Dialog';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AuthProvider, useAuth } from './src/lib/auth';
 import { colors, fonts } from './src/lib/theme';
@@ -154,10 +155,12 @@ export default function App() {
   return (
     <SafeAreaProvider style={{ backgroundColor: colors.bg }}>
       <AuthProvider>
+        <DialogHost>
         <NavigationContainer theme={navTheme}>
           <StatusBar style="light" />
           <Root />
         </NavigationContainer>
+        </DialogHost>
       </AuthProvider>
     </SafeAreaProvider>
   );

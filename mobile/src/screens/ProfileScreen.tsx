@@ -1,5 +1,6 @@
-import { Alert, Pressable, StyleSheet, Switch, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Switch, Text, View } from 'react-native';
 import { setAlertsEnabled, useAlertsEnabled } from '../lib/proximity';
+import { alert } from '../components/Dialog';
 import { Icon } from '../components/Icon';
 import { useAuth } from '../lib/auth';
 import { colors, fonts } from '../lib/theme';
@@ -10,7 +11,7 @@ export function ProfileScreen() {
   const alertsOn = useAlertsEnabled();
 
   const confirmLogout = () =>
-    Alert.alert('Keluar', 'Yakin ingin keluar dari akun?', [
+    alert('Keluar', 'Yakin ingin keluar dari akun?', [
       { text: 'Batal', style: 'cancel' },
       { text: 'Keluar', style: 'destructive', onPress: signOut },
     ]);

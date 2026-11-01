@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
-  Alert,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -11,6 +10,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import { alert } from '../components/Dialog';
 import { Icon } from '../components/Icon';
 import * as ImagePicker from 'expo-image-picker';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -58,7 +58,7 @@ export function ReportDetailScreen({ route, navigation }: Props) {
       setComments(c);
       setUpdates(u);
     } catch {
-      Alert.alert('Laporan tidak ditemukan', 'Mungkin sudah dihapus.');
+      alert('Laporan tidak ditemukan', 'Mungkin sudah dihapus.');
       navigation.goBack();
     }
   }, [id, navigation]);
@@ -82,9 +82,9 @@ export function ReportDetailScreen({ route, navigation }: Props) {
       if (!base64) throw new Error('Foto tidak bisa dibaca. Pilih ulang foto dari galeri.');
       const imageUrl = await replaceReportImage(report, userId, base64);
       setReport({ ...report, image_url: imageUrl });
-      Alert.alert('Foto diperbarui', 'Foto pengganti dapat dilihat oleh pengguna dan admin.');
+      alert('Foto diperbarui', 'Foto pengganti dapat dilihat oleh pengguna dan admin.');
     } catch (error) {
-      Alert.alert('Gagal mengganti foto', error instanceof Error ? error.message : 'Coba lagi.');
+      alert('Gagal mengganti foto', error instanceof Error ? error.message : 'Coba lagi.');
     } finally {
       setReplacingPhoto(false);
     }
@@ -101,7 +101,7 @@ export function ReportDetailScreen({ route, navigation }: Props) {
       await setValidation(report.id, userId, myVote?.still_damaged === still ? null : still);
       await load();
     } catch (e) {
-      Alert.alert('Gagal menyimpan konfirmasi', e instanceof Error ? e.message : '');
+      alert('Gagal menyimpan konfirmasi', e instanceof Error ? e.message : '');
     }
   };
 
@@ -119,14 +119,14 @@ export function ReportDetailScreen({ route, navigation }: Props) {
       setText('');
       await load();
     } catch (e) {
-      Alert.alert('Gagal mengirim komentar', e instanceof Error ? e.message : '');
+      alert('Gagal mengirim komentar', e instanceof Error ? e.message : '');
     } finally {
       setSending(false);
     }
   };
 
   const removeReport = () =>
-    Alert.alert('Hapus laporan', 'Laporan ini akan dihapus permanen.', [
+    alert('Hapus laporan', 'Laporan ini akan dihapus permanen.', [
       { text: 'Batal', style: 'cancel' },
       {
         text: 'Hapus',
@@ -136,7 +136,7 @@ export function ReportDetailScreen({ route, navigation }: Props) {
             await deleteReport(report);
             navigation.goBack();
           } catch (e) {
-            Alert.alert('Gagal menghapus', e instanceof Error ? e.message : '');
+            alert('Gagal menghapus', e instanceof Error ? e.message : '');
           }
         },
       },
