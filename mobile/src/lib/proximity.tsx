@@ -3,19 +3,17 @@ import { Pressable, StyleSheet, Text, Vibration, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Location from 'expo-location';
+import * as Notifications from 'expo-notifications';
 import { useNavigation } from '@react-navigation/native';
 import { Icon } from '../components/Icon';
-import { fetchMapReports } from './api';
-import { categoryMeta, colors, distanceMeters } from './theme';
-import type { Report } from './types';
-
-const KEY = 'alerts_enabled';
-const RADIUS_M = 200;
+import { alert } from '../components/Dialog';
+import { checkNearby, enableAlerts, ENABLED_KEY, resumeBackground, stopBackground } from './proximityTask';
+import { colors } from './theme';
 
 // ---- preferensi on/off (disimpan di perangkat) ----
 let enabled = true;
 const listeners = new Set<() => void>();
-AsyncStorage.getItem(KEY)
+AsyncStorage.getItem(ENABLED_KEY)
   .then((v) => {
     if (v === '0') {
       enabled = false;
@@ -24,11 +22,12 @@ AsyncStorage.getItem(KEY)
   })
   .catch(() => {});
 
-export function setAlertsEnabled(v: boolean) {
+function setEnabled(v: boolean) {
   enabled = v;
-  AsyncStorage.setItem(KEY, v ? '1' : '0').catch(() => {});
+  AsyncStorage.setItem(ENABLED_KEY, v ? '1' : '0').catch(() => {});
   listeners.forEach((l) => l());
 }
+
 export function useAlertsEnabled() {
   return useSyncExternalStore(
     (cb) => (listeners.add(cb), () => listeners.delete(cb)),
@@ -36,54 +35,57 @@ export function useAlertsEnabled() {
   );
 }
 
-const isDangerous = (r: Report) =>
-  r.status !== 'selesai' &&
-  r.status !== 'ditolak' &&
-  (r.severity >= 3 || r.category === 'area_berbahaya' || r.priority_score >= 70);
+/** Dipanggil dari saklar di Profil: meminta izin saat dinyalakan, menghentikan pemantauan saat dimatikan. */
+export async function toggleAlerts(on: boolean) {
+  if (!on) {
+    setEnabled(false);
+    await stopBackground();
+    return;
+  }
+  const result = await enableAlerts().catch(() => 'denied' as const);
+  if (result === 'denied') {
+    setEnabled(false);
+    alert('Izin diperlukan', 'Izinkan lokasi dan notifikasi untuk LaporJalan di pengaturan perangkat agar peringatan bisa aktif.');
+    return;
+  }
+  setEnabled(true);
+  if (result === 'foreground') {
+    alert(
+      'Hanya saat aplikasi terbuka',
+      'Agar notifikasi tetap muncul saat aplikasi ditutup, ubah izin lokasi LaporJalan menjadi "Izinkan sepanjang waktu" di pengaturan perangkat.',
+    );
+  }
+}
+
+type Banner = { reportId: string; title: string; body: string };
 
 /**
- * Peringatan area berbahaya: selama aplikasi terbuka, pantau lokasi dan tampilkan
- * banner + getar saat pengguna mendekati (<= 200 m) laporan yang berbahaya.
- * (Notifikasi saat aplikasi tertutup butuh development build, tidak tersedia di Expo Go.)
+ * Peringatan area berbahaya. Saat pengguna mendekati (<= 200 m) laporan yang berbahaya:
+ * - aplikasi tertutup: notifikasi sistem (dari tugas lokasi latar belakang di proximityTask.ts)
+ * - aplikasi terbuka: banner di dalam aplikasi + getar
  */
 export function ProximityBanner() {
   const nav = useNavigation<any>();
   const insets = useSafeAreaInsets();
   const on = useAlertsEnabled();
-  const [alert, setAlert] = useState<{ report: Report; meters: number } | null>(null);
-  const reports = useRef<Report[]>([]);
-  const alerted = useRef(new Set<string>());
+  const [banner, setBanner] = useState<Banner | null>(null);
+  const handled = useRef<string | null>(null);
+  const lastResponse = Notifications.useLastNotificationResponse();
 
+  // Pemantauan: latar belakang (bila diizinkan) + saat aplikasi terbuka.
   useEffect(() => {
     if (!on) return;
     let sub: Location.LocationSubscription | null = null;
-    let timer: ReturnType<typeof setInterval> | null = null;
     let cancelled = false;
-
-    const refresh = () =>
-      fetchMapReports()
-        .then((r) => (reports.current = r.filter(isDangerous)))
-        .catch(() => {});
 
     (async () => {
       const perm = await Location.requestForegroundPermissionsAsync();
       if (perm.status !== 'granted' || cancelled) return;
-      await refresh();
-      timer = setInterval(refresh, 5 * 60 * 1000);
+      await resumeBackground().catch(() => {});
       sub = await Location.watchPositionAsync(
         { accuracy: Location.Accuracy.Balanced, distanceInterval: 40, timeInterval: 15000 },
         (pos) => {
-          let best: { report: Report; meters: number } | null = null;
-          for (const r of reports.current) {
-            if (alerted.current.has(r.id) || r.latitude == null || r.longitude == null) continue;
-            const m = distanceMeters(pos.coords.latitude, pos.coords.longitude, r.latitude, r.longitude);
-            if (m <= RADIUS_M && (!best || m < best.meters)) best = { report: r, meters: m };
-          }
-          if (best) {
-            alerted.current.add(best.report.id);
-            Vibration.vibrate([0, 300, 150, 300]);
-            setAlert(best);
-          }
+          checkNearby(pos.coords.latitude, pos.coords.longitude).catch(() => {});
         },
       );
     })().catch(() => {});
@@ -91,34 +93,54 @@ export function ProximityBanner() {
     return () => {
       cancelled = true;
       sub?.remove();
-      if (timer) clearInterval(timer);
     };
   }, [on]);
 
+  // Notifikasi yang masuk saat aplikasi terbuka -> tampilkan sebagai banner.
   useEffect(() => {
-    if (!alert) return;
-    const t = setTimeout(() => setAlert(null), 12000);
-    return () => clearTimeout(t);
-  }, [alert]);
+    const sub = Notifications.addNotificationReceivedListener((n) => {
+      const reportId = (n.request.content.data as { reportId?: string } | undefined)?.reportId;
+      if (!reportId) return;
+      Vibration.vibrate([0, 300, 150, 300]);
+      setBanner({ reportId, title: n.request.content.title ?? 'Hati-hati! Area berbahaya', body: n.request.content.body ?? '' });
+    });
+    return () => sub.remove();
+  }, []);
 
-  if (!alert) return null;
-  const { report, meters } = alert;
+  // Ketuk notifikasi (termasuk saat aplikasi dibuka dari kondisi tertutup) -> buka detail laporan.
+  useEffect(() => {
+    if (!lastResponse) return;
+    const id = lastResponse.notification.request.identifier;
+    const reportId = (lastResponse.notification.request.content.data as { reportId?: string } | undefined)?.reportId;
+    if (!reportId || handled.current === id) return;
+    handled.current = id;
+    const t = setTimeout(() => nav.navigate('ReportDetail', { id: reportId }), 300);
+    return () => clearTimeout(t);
+  }, [lastResponse, nav]);
+
+  useEffect(() => {
+    if (!banner) return;
+    const t = setTimeout(() => setBanner(null), 12000);
+    return () => clearTimeout(t);
+  }, [banner]);
+
+  if (!banner) return null;
   return (
     <Pressable
       style={[styles.banner, { top: insets.top + 8 }]}
       onPress={() => {
-        setAlert(null);
-        nav.navigate('ReportDetail', { id: report.id });
+        setBanner(null);
+        nav.navigate('ReportDetail', { id: banner.reportId });
       }}
     >
       <Icon name="area-berbahaya" size={43} />
       <View style={{ flex: 1 }}>
-        <Text style={styles.title}>Hati-hati! Area berbahaya ±{Math.round(meters)} m</Text>
+        <Text style={styles.title}>{banner.title}</Text>
         <Text style={styles.sub} numberOfLines={2}>
-          {categoryMeta[report.category]?.label}: {report.title}
+          {banner.body}
         </Text>
       </View>
-      <Pressable onPress={() => setAlert(null)} hitSlop={10}>
+      <Pressable onPress={() => setBanner(null)} hitSlop={10}>
         <Icon name="tutup" size={37} />
       </Pressable>
     </Pressable>

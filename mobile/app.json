@@ -2,7 +2,7 @@
   "expo": {
     "name": "LaporJalan",
     "slug": "laporjalan",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -18,7 +18,17 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "LaporJalan memerlukan lokasi untuk menandai lokasi kerusakan jalan."
+          "locationWhenInUsePermission": "LaporJalan memerlukan lokasi untuk menandai lokasi kerusakan jalan.",
+          "locationAlwaysAndWhenInUsePermission": "LaporJalan memerlukan lokasi agar bisa memberi tahu saat kamu dekat area berbahaya.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/android-icon-monochrome.png",
+          "color": "#0B5D4B"
         }
       ],
       "expo-font"

@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Switch, Text, View } from 'react-native';
-import { setAlertsEnabled, useAlertsEnabled } from '../lib/proximity';
+import { toggleAlerts, useAlertsEnabled } from '../lib/proximity';
 import { alert } from '../components/Dialog';
 import { Icon } from '../components/Icon';
 import { useAuth } from '../lib/auth';
@@ -35,9 +35,9 @@ export function ProfileScreen() {
       <Icon name="sekitar-saya" size={40} />
       <View style={{ flex: 1 }}>
         <Text style={[styles.name, { fontSize: 15 }]}>Peringatan area berbahaya</Text>
-        <Text style={styles.sub}>Diberi tahu saat dalam 200 m dari kerusakan berbahaya (aplikasi terbuka).</Text>
+        <Text style={styles.sub}>Diberi notifikasi saat dalam 200 m dari kerusakan berbahaya.</Text>
       </View>
-      <Switch value={alertsOn} onValueChange={setAlertsEnabled} trackColor={{ true: colors.primary, false: '#cfd6d2' }} thumbColor="#fff" />
+      <Switch value={alertsOn} onValueChange={toggleAlerts} trackColor={{ true: colors.primary, false: '#cfd6d2' }} thumbColor="#fff" />
     </View>
     <Text style={styles.listTitle}>Laporan saya</Text>
     </>
