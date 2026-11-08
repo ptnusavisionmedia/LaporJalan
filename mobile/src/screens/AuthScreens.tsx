@@ -17,6 +17,7 @@ import { useAuth } from '../lib/auth';
 import { isConfigured } from '../lib/supabase';
 import { colors, fonts } from '../lib/theme';
 import { Sticker } from '../components/Sticker';
+import { EyeIcon } from '../components/EyeIcon';
 
 type AuthStack = { Login: undefined; Register: undefined; Tabs: undefined; ReportDetail: { id: string } };
 
@@ -101,8 +102,8 @@ function AuthForm({ mode, onSwitch }: { mode: 'login' | 'register'; onSwitch: ()
                 placeholder="minimal 6 karakter"
                 placeholderTextColor={colors.muted}
               />
-              <Pressable onPress={() => setShowPw((v) => !v)} hitSlop={10} accessibilityRole="button" accessibilityLabel={showPw ? 'Sembunyikan password' : 'Tampilkan password'}>
-                <Text style={styles.eye}>{showPw ? 'Sembunyi' : 'Lihat'}</Text>
+              <Pressable onPress={() => setShowPw((v) => !v)} hitSlop={12} style={styles.eyeBtn} accessibilityRole="button" accessibilityLabel={showPw ? 'Sembunyikan password' : 'Tampilkan password'}>
+                <EyeIcon off={showPw} size={28} />
               </Pressable>
             </View>
 
@@ -120,8 +121,8 @@ function AuthForm({ mode, onSwitch }: { mode: 'login' | 'register'; onSwitch: ()
                     autoCorrect={false}
                     placeholderTextColor={colors.muted}
                   />
-                <Pressable onPress={() => setShowPw((v) => !v)} hitSlop={10} accessibilityRole="button" accessibilityLabel={showPw ? 'Sembunyikan password' : 'Tampilkan password'}>
-                  <Text style={styles.eye}>{showPw ? 'Sembunyi' : 'Lihat'}</Text>
+                <Pressable onPress={() => setShowPw((v) => !v)} hitSlop={12} style={styles.eyeBtn} accessibilityRole="button" accessibilityLabel={showPw ? 'Sembunyikan password' : 'Tampilkan password'}>
+                  <EyeIcon off={showPw} size={28} />
                 </Pressable>
                 </View>
               </>
@@ -176,7 +177,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     backgroundColor: '#fff',
   },
-  eye: { color: colors.primary, fontWeight: '700', fontSize: 14, paddingHorizontal: 4 },
+  eyeBtn: { paddingHorizontal: 4, paddingVertical: 6 },
   input: { flex: 1, paddingVertical: 12, fontSize: 16, color: colors.ink },
   btn: { paddingVertical: 14, alignItems: 'center' },
   btnText: { color: '#fff', fontWeight: '700', fontSize: 16 },
