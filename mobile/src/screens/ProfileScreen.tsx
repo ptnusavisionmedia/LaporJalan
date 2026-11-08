@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Switch, Text, View } from 'react-native';
 import { toggleAlerts, useAlertsEnabled } from '../lib/proximity';
+import { diagnoseAlerts } from '../lib/proximityTask';
 import { alert } from '../components/Dialog';
 import { Icon } from '../components/Icon';
 import { useAuth } from '../lib/auth';
@@ -39,6 +40,15 @@ export function ProfileScreen() {
       </View>
       <Switch value={alertsOn} onValueChange={toggleAlerts} trackColor={{ true: colors.primary, false: '#cfd6d2' }} thumbColor="#fff" />
     </View>
+    <Pressable
+      style={styles.testBtn}
+      onPress={async () => {
+        const d = await diagnoseAlerts();
+        alert(d.ok ? 'Peringatan siap' : 'Ada yang perlu dibenahi', d.lines.join('\n'));
+      }}
+    >
+      <Text style={styles.testText}>Uji peringatan area berbahaya</Text>
+    </Pressable>
     <Text style={styles.listTitle}>Laporan saya</Text>
     </>
   );
@@ -51,6 +61,8 @@ export function ProfileScreen() {
 }
 
 const styles = StyleSheet.create({
+  testBtn: { alignSelf: 'flex-start', marginBottom: 16, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 10, borderWidth: 2, borderColor: colors.primary, backgroundColor: '#fff' },
+  testText: { color: colors.primary, fontFamily: fonts.displayBold, fontSize: 15 },
   listTitle: { fontSize: 20, fontFamily: fonts.displayBold, color: colors.ink, marginBottom: 14 },
   alertRow: {
     flexDirection: 'row',

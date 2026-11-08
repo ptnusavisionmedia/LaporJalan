@@ -16,18 +16,18 @@ export const ENABLED_KEY = 'alerts_enabled';
 const CHANNEL = 'bahaya';
 const CACHE_KEY = 'danger_cache';
 const ALERTED_KEY = 'danger_alerted';
-const CACHE_TTL_MS = 5 * 60 * 1000;
-// Satu titik bahaya hanya diberitahukan sekali per 6 jam, supaya tidak berulang di tempat yang sama.
-const REALERT_MS = 6 * 60 * 60 * 1000;
+const CACHE_TTL_MS = 2 * 60 * 1000;
+// Satu titik bahaya hanya diberitahukan sekali per 30 menit, supaya tidak berulang di tempat yang sama.
+const REALERT_MS = 30 * 60 * 1000;
 
 type Danger = Pick<Report, 'id' | 'title' | 'category'> & { latitude: number; longitude: number };
 
-// Saat aplikasi terbuka, peringatan ditampilkan sebagai banner di dalam aplikasi (bukan kotak notifikasi sistem).
+// Peringatan selalu tampil sebagai notifikasi sistem (juga saat aplikasi terbuka), ditambah banner di dalam aplikasi.
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
-    shouldShowBanner: false,
+    shouldShowBanner: true,
     shouldShowList: true,
-    shouldPlaySound: false,
+    shouldPlaySound: true,
     shouldSetBadge: false,
   }),
 });
@@ -88,10 +88,10 @@ export async function checkNearby(lat: number, lng: number) {
   }
   if (!best) return;
 
+  await notifyDanger(best.report, best.meters);
   alerted[best.report.id] = now;
   for (const id of Object.keys(alerted)) if (now - alerted[id] > REALERT_MS) delete alerted[id];
   await AsyncStorage.setItem(ALERTED_KEY, JSON.stringify(alerted)).catch(() => {});
-  await notifyDanger(best.report, best.meters);
 }
 
 TaskManager.defineTask(PROXIMITY_TASK, async ({ data, error }) => {
@@ -162,4 +162,66 @@ export async function resumeBackground() {
     await ensureChannel();
     await startBackground();
   }
+}
+
+export type Diagnosis = { lines: string[]; ok: boolean };
+
+/** Periksa semua syarat peringatan dan kirim satu notifikasi uji. Dipakai tombol "Uji peringatan" di Profil. */
+export async function diagnoseAlerts(): Promise<Diagnosis> {
+  const lines: string[] = [];
+  let ok = true;
+  const bad = (s: string) => {
+    ok = false;
+    lines.push('✗ ' + s);
+  };
+  const good = (s: string) => lines.push('✓ ' + s);
+
+  const notif = await Notifications.getPermissionsAsync().catch(() => null);
+  notif?.granted ? good('Izin notifikasi aktif') : bad('Izin notifikasi belum diberikan');
+  const fg = await Location.getForegroundPermissionsAsync().catch(() => null);
+  fg?.status === 'granted' ? good('Izin lokasi aktif') : bad('Izin lokasi belum diberikan');
+  const enabled = (await AsyncStorage.getItem(ENABLED_KEY).catch(() => null)) !== '0';
+  enabled ? good('Saklar peringatan menyala') : bad('Saklar peringatan mati');
+  const running = await Location.hasStartedLocationUpdatesAsync(PROXIMITY_TASK).catch(() => false);
+  running ? good('Pemantauan latar belakang berjalan') : bad('Pemantauan latar belakang belum berjalan (buka ulang aplikasi)');
+
+  try {
+    await AsyncStorage.removeItem(CACHE_KEY);
+    const list = await loadDangerous();
+    if (list.length === 0) {
+      bad('Tidak ada laporan berbahaya (belum selesai, tingkat parah ≥ 3 / jenis Area berbahaya / prioritas ≥ 70)');
+    } else {
+      good(list.length + ' laporan berbahaya terdeteksi');
+      try {
+        const pos = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
+        let near = list[0];
+        let nearM = Infinity;
+        for (const r of list) {
+          const m = distanceMeters(pos.coords.latitude, pos.coords.longitude, r.latitude, r.longitude);
+          if (m < nearM) {
+            nearM = m;
+            near = r;
+          }
+        }
+        const txt = 'Terdekat: ' + near.title + ' ±' + Math.round(nearM) + ' m';
+        nearM <= RADIUS_M ? good(txt + ' (dalam ' + RADIUS_M + ' m)') : lines.push('• ' + txt + ' (di luar ' + RADIUS_M + ' m)');
+      } catch {
+        bad('Posisi saat ini tidak terbaca (nyalakan GPS)');
+      }
+    }
+  } catch (e) {
+    bad('Gagal memuat laporan: ' + (e instanceof Error ? e.message : 'tidak diketahui'));
+  }
+
+  try {
+    await ensureChannel();
+    await Notifications.scheduleNotificationAsync({
+      content: { title: 'Uji peringatan LaporJalan', body: 'Jika notifikasi ini muncul, peringatan area berbahaya siap bekerja.', sound: true, color: colors.primary },
+      trigger: Platform.OS === 'android' ? { channelId: CHANNEL } : null,
+    });
+    good('Notifikasi uji dikirim');
+  } catch (e) {
+    bad('Notifikasi uji gagal: ' + (e instanceof Error ? e.message : 'tidak diketahui'));
+  }
+  return { lines, ok };
 }
