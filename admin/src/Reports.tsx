@@ -111,7 +111,7 @@ export function Reports({
       {error && <div className="alert error">{error}</div>}
 
       <div className="panel table-wrap">
-        <table>
+        <table className="stack">
           <thead>
             <tr>
               <th>Foto</th>
@@ -144,28 +144,28 @@ export function Reports({
               const fixed = r.validations.length - still
               return (
                 <tr key={r.id} className="click" onClick={() => setSelectedId(r.id)}>
-                  <td>
+                  <td className="c-photo">
                     <ReportImage className="thumb" src={r.image_url} alt={r.title} />
                   </td>
-                  <td>
+                  <td className="c-title">
                     <b>{r.title}</b>
                     <div className="small muted">
                       {CATEGORY_LABEL[r.category]} · {SEVERITY_LABEL[r.severity]} · {fmtDate(r.created_at)}
                     </div>
                   </td>
-                  <td>@{r.profiles?.username}</td>
-                  <td className="small">{[r.village, r.district, r.city].filter(Boolean).join(', ') || r.address || '-'}</td>
-                  <td>
+                  <td data-label="Pelapor">@{r.profiles?.username}</td>
+                  <td className="small" data-label="Wilayah">{[r.village, r.district, r.city].filter(Boolean).join(', ') || r.address || '-'}</td>
+                  <td data-label="Prioritas">
                     <span className={`badge ${pr.cls}`}>
                       {pr.label} · {r.priority_score}
                     </span>
                   </td>
-                  <td className="small">
+                  <td className="small" data-label="Warga">
                     {r.likes[0]?.count ?? 0} suka · {r.comments[0]?.count ?? 0} komentar
                     <br />
                     {still} masih rusak · {fixed} sudah diperbaiki
                   </td>
-                  <td>
+                  <td data-label="Status">
                     <span className={`badge s-${r.status}`}>{STATUS_LABEL[r.status]}</span>
                   </td>
                 </tr>

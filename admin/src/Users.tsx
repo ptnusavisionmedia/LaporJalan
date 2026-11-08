@@ -30,7 +30,7 @@ export function Users({ me }: { me: Profile }) {
         “instansi” lalu tentukan wilayahnya.
       </p>
       <div className="panel table-wrap">
-        <table>
+        <table className="stack">
           <thead>
             <tr>
               <th>Username</th>
@@ -51,22 +51,22 @@ export function Users({ me }: { me: Profile }) {
             )}
             {users?.map((u) => (
               <tr key={u.id}>
-                <td>
+                <td className="c-title">
                   <b>@{u.username}</b>
                 </td>
-                <td>
+                <td data-label="Peran">
                   <span className={`badge ${u.role === 'admin' ? 's-diproses' : u.role === 'instansi' ? 's-diverifikasi' : 's-menunggu'}`}>
                     {u.role}
                   </span>
                 </td>
-                <td className="small">
+                <td className="small" data-label="Instansi / wilayah">
                   {u.role === 'instansi'
                     ? `${u.agency_name || '-'} · ${u.scope_level === 'nasional' ? 'Nasional' : `${u.scope_level}: ${u.scope_value ?? '-'}`}`
                     : '-'}
                 </td>
-                <td>{counts[u.id] ?? 0}</td>
-                <td className="small">{fmtDate(u.created_at)}</td>
-                <td>
+                <td data-label="Laporan">{counts[u.id] ?? 0}</td>
+                <td className="small" data-label="Terdaftar">{fmtDate(u.created_at)}</td>
+                <td className="c-action">
                   {u.id !== me.id && (
                     <button className="btn small-btn" onClick={() => setEditing(u)}>
                       Atur

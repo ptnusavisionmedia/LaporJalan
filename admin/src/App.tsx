@@ -55,13 +55,13 @@ export default function App() {
     setPage('reports')
   }
 
-  const nav: [Page, string, IconName][] = [
-    ['dashboard', 'Ringkasan', 'dashboard'],
-    ['map', 'Peta', 'map'],
-    ['reports', 'Laporan', 'list'],
-    ['stats', 'Statistik wilayah', 'chart'],
+  const nav: [Page, string, IconName, string][] = [
+    ['dashboard', 'Ringkasan', 'dashboard', 'Ringkasan'],
+    ['map', 'Peta', 'map', 'Peta'],
+    ['reports', 'Laporan', 'list', 'Laporan'],
+    ['stats', 'Statistik wilayah', 'chart', 'Statistik'],
   ]
-  if (isAdmin) nav.push(['users', 'Pengguna & instansi', 'users'])
+  if (isAdmin) nav.push(['users', 'Pengguna & instansi', 'users', 'Pengguna'])
 
   const scopeText =
     profile.role === 'admin'
@@ -72,12 +72,20 @@ export default function App() {
 
   return (
     <div className="shell">
+      <header className="topbar">
+        <div className="brand">
+          <Logo size={34} light /> LaporJalan
+        </div>
+        <button className="topbar-out" onClick={() => supabase.auth.signOut()} aria-label="Keluar">
+          <Icon name="logout" />
+        </button>
+      </header>
       <aside className="sidebar">
         <div className="brand">
           <Logo size={40} light /> LaporJalan
         </div>
         <div className="who">{scopeText}</div>
-        {nav.map(([key, label, icon]) => (
+        {nav.map(([key, label, icon, short]) => (
           <button
             key={key}
             className={`nav ${page === key ? 'active' : ''}`}
@@ -87,11 +95,12 @@ export default function App() {
             }}
           >
             <Icon name={icon} />
-            {label}
+            <span className="lbl">{label}</span>
+            <span className="lbl-s">{short}</span>
           </button>
         ))}
         <div className="grow" />
-        <button className="nav" onClick={() => supabase.auth.signOut()}>
+        <button className="nav nav-out" onClick={() => supabase.auth.signOut()}>
           <Icon name="logout" />
           Keluar
         </button>

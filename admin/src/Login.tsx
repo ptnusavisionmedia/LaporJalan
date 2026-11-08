@@ -8,6 +8,7 @@ export function Login() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
+  const [show, setShow] = useState(false)
 
   const submit = async (e: FormEvent) => {
     e.preventDefault()
@@ -59,14 +60,31 @@ export function Login() {
         <input id="username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="admin atau email akun Supabase" autoFocus autoComplete="username" autoCapitalize="none" spellCheck={false} required />
 
         <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          autoComplete="current-password"
-          required
-        />
+        <div className="pw">
+          <input
+            id="password"
+            type={show ? 'text' : 'password'}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            autoComplete="current-password"
+            autoCapitalize="none"
+            spellCheck={false}
+            required
+          />
+          <button
+            type="button"
+            className="pw-toggle"
+            onClick={() => setShow((v) => !v)}
+            aria-label={show ? 'Sembunyikan password' : 'Tampilkan password'}
+            aria-pressed={show}
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" />
+              <circle cx="12" cy="12" r="3" />
+              {show && <path d="M3 3l18 18" />}
+            </svg>
+          </button>
+        </div>
 
         {error && <div className="alert error" role="alert">{error}</div>}
 

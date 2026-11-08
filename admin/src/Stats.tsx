@@ -76,7 +76,7 @@ export function Stats({ profile }: { profile: Profile }) {
         </button>
       </div>
       <div className="panel table-wrap">
-        <table>
+        <table className="stack">
           <thead>
             <tr>
               <th>Wilayah</th>
@@ -99,14 +99,14 @@ export function Stats({ profile }: { profile: Profile }) {
               const pct = Math.round((r.done / r.total) * 100)
               return (
                 <tr key={r.name}>
-                  <td>
+                  <td className="c-title">
                     <b>{r.name}</b>
                   </td>
-                  <td>{r.total}</td>
-                  <td>{r.pending}</td>
-                  <td>{r.progress}</td>
-                  <td>{r.done}</td>
-                  <td>
+                  <td data-label="Total">{r.total}</td>
+                  <td data-label="Belum ditangani">{r.pending}</td>
+                  <td data-label="Diproses">{r.progress}</td>
+                  <td data-label="Selesai">{r.done}</td>
+                  <td data-label="Progres">
                     <div className="bar">
                       <div className="bar-done" style={{ flex: r.done }} />
                       <div className="bar-prog" style={{ flex: r.progress }} />
