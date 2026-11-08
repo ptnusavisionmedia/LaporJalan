@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
-import { Pressable, StyleSheet, Text, Vibration, View } from 'react-native';
+import { Linking, Pressable, StyleSheet, Text, Vibration, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Location from 'expo-location';
@@ -7,7 +7,7 @@ import * as Notifications from 'expo-notifications';
 import { useNavigation } from '@react-navigation/native';
 import { Icon } from '../components/Icon';
 import { alert } from '../components/Dialog';
-import { checkNearby, enableAlerts, ENABLED_KEY, resumeBackground, stopBackground } from './proximityTask';
+import { checkNearby, enableAlerts, ENABLED_KEY, stopBackground } from './proximityTask';
 import { colors } from './theme';
 
 // ---- preferensi on/off (disimpan di perangkat) ----
@@ -45,15 +45,15 @@ export async function toggleAlerts(on: boolean) {
   const result = await enableAlerts().catch(() => 'denied' as const);
   if (result === 'denied') {
     setEnabled(false);
-    alert('Izin diperlukan', 'Izinkan lokasi dan notifikasi untuk LaporJalan di pengaturan perangkat agar peringatan bisa aktif.');
+    alert('Izin diperlukan', 'Izin lokasi dan notifikasi ditolak. Aktifkan keduanya di pengaturan perangkat agar peringatan bisa berjalan.', [
+      { text: 'Nanti', style: 'cancel' },
+      { text: 'Buka pengaturan', onPress: () => Linking.openSettings().catch(() => {}) },
+    ]);
     return;
   }
   setEnabled(true);
   if (result === 'foreground') {
-    alert(
-      'Hanya saat aplikasi terbuka',
-      'Agar notifikasi tetap muncul saat aplikasi ditutup, ubah izin lokasi LaporJalan menjadi "Izinkan sepanjang waktu" di pengaturan perangkat.',
-    );
+    alert('Hanya saat aplikasi terbuka', 'Pemantauan di latar belakang belum bisa dijalankan. Peringatan tetap muncul selama aplikasi terbuka.');
   }
 }
 
@@ -79,9 +79,9 @@ export function ProximityBanner() {
     let cancelled = false;
 
     (async () => {
-      const perm = await Location.requestForegroundPermissionsAsync();
-      if (perm.status !== 'granted' || cancelled) return;
-      await resumeBackground().catch(() => {});
+      // Minta izin lewat dialog sistem (sekali; bila sudah diizinkan langsung lanjut). Memulai layanan pemantauan latar belakang.
+      const result = await enableAlerts().catch(() => 'denied' as const);
+      if (result === 'denied' || cancelled) return;
       sub = await Location.watchPositionAsync(
         { accuracy: Location.Accuracy.Balanced, distanceInterval: 40, timeInterval: 15000 },
         (pos) => {

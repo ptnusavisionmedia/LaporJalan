@@ -137,24 +137,28 @@ export async function stopBackground() {
 export type EnableResult = 'full' | 'foreground' | 'denied';
 
 /**
- * Minta izin lalu aktifkan peringatan.
- * 'full' = notifikasi juga muncul saat aplikasi tertutup; 'foreground' = hanya saat aplikasi terbuka; 'denied' = izin ditolak.
+ * Minta izin lalu aktifkan peringatan. Semua izin diminta lewat dialog sistem di dalam aplikasi (tanpa ke Pengaturan).
+ * Pemantauan latar belakang memakai layanan latar depan (notifikasi tetap), yang TIDAK butuh izin lokasi "sepanjang waktu".
+ * 'full' = notifikasi juga muncul saat aplikasi ditutup/di latar belakang; 'foreground' = hanya saat aplikasi terbuka;
+ * 'denied' = izin lokasi/notifikasi ditolak.
  */
 export async function enableAlerts(): Promise<EnableResult> {
   await ensureChannel();
   const notif = await Notifications.requestPermissionsAsync();
   const fg = await Location.requestForegroundPermissionsAsync();
   if (fg.status !== 'granted' || !notif.granted) return 'denied';
-  const bg = await Location.requestBackgroundPermissionsAsync();
-  if (bg.status !== 'granted') return 'foreground';
-  await startBackground();
-  return 'full';
+  try {
+    await startBackground();
+    return 'full';
+  } catch {
+    return 'foreground';
+  }
 }
 
 /** Dipanggil saat aplikasi dibuka: lanjutkan pemantauan latar belakang bila izinnya sudah ada (tanpa menampilkan permintaan izin). */
 export async function resumeBackground() {
-  const [bg, notif] = await Promise.all([Location.getBackgroundPermissionsAsync(), Notifications.getPermissionsAsync()]);
-  if (bg.status === 'granted' && notif.granted) {
+  const [fg, notif] = await Promise.all([Location.getForegroundPermissionsAsync(), Notifications.getPermissionsAsync()]);
+  if (fg.status === 'granted' && notif.granted) {
     await ensureChannel();
     await startBackground();
   }

@@ -25,6 +25,7 @@ function AuthForm({ mode, onSwitch }: { mode: 'login' | 'register'; onSwitch: ()
   const insets = useSafeAreaInsets();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showPw, setShowPw] = useState(false);
   const [confirm, setConfirm] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
@@ -94,11 +95,15 @@ function AuthForm({ mode, onSwitch }: { mode: 'login' | 'register'; onSwitch: ()
                 style={styles.input}
                 value={password}
                 onChangeText={setPassword}
-                secureTextEntry
+                secureTextEntry={!showPw}
                 autoCapitalize="none"
+                autoCorrect={false}
                 placeholder="minimal 6 karakter"
                 placeholderTextColor={colors.muted}
               />
+              <Pressable onPress={() => setShowPw((v) => !v)} hitSlop={10} accessibilityRole="button" accessibilityLabel={showPw ? 'Sembunyikan password' : 'Tampilkan password'}>
+                <Text style={styles.eye}>{showPw ? 'Sembunyi' : 'Lihat'}</Text>
+              </Pressable>
             </View>
 
             {!isLogin && (
@@ -110,10 +115,14 @@ function AuthForm({ mode, onSwitch }: { mode: 'login' | 'register'; onSwitch: ()
                     style={styles.input}
                     value={confirm}
                     onChangeText={setConfirm}
-                    secureTextEntry
+                    secureTextEntry={!showPw}
                     autoCapitalize="none"
+                    autoCorrect={false}
                     placeholderTextColor={colors.muted}
                   />
+                <Pressable onPress={() => setShowPw((v) => !v)} hitSlop={10} accessibilityRole="button" accessibilityLabel={showPw ? 'Sembunyikan password' : 'Tampilkan password'}>
+                  <Text style={styles.eye}>{showPw ? 'Sembunyi' : 'Lihat'}</Text>
+                </Pressable>
                 </View>
               </>
             )}
@@ -167,6 +176,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     backgroundColor: '#fff',
   },
+  eye: { color: colors.primary, fontWeight: '700', fontSize: 14, paddingHorizontal: 4 },
   input: { flex: 1, paddingVertical: 12, fontSize: 16, color: colors.ink },
   btn: { paddingVertical: 14, alignItems: 'center' },
   btnText: { color: '#fff', fontWeight: '700', fontSize: 16 },
