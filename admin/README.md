@@ -1,32 +1,24 @@
-# React + TypeScript + Vite
+# LaporJalan – Web Admin
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Dasbor admin/instansi (React + Vite + Supabase).
 
-Currently, two official plugins are available:
+## Jalankan lokal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+cp .env.example .env   # isi URL & anon key Supabase
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Hosting di Vercel
+
+1. Push repo ke GitHub, lalu di Vercel pilih **Add New → Project** dan impor repo ini.
+2. **Root Directory**: `admin` (Framework otomatis terdeteksi sebagai Vite; `vercel.json` sudah mengatur build).
+3. Di **Environment Variables** isi:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY` (anon/publishable key, **bukan** service-role key)
+4. Klik **Deploy**.
+5. Setelah dapat alamat (misal `https://laporjalan-admin.vercel.app`), buka Supabase → **Authentication → URL Configuration**, lalu tambahkan alamat itu di **Site URL** / **Redirect URLs**.
+
+Variabel `VITE_*` ditanam saat build, jadi setelah mengubahnya lakukan **Redeploy**.
+Hosting statis lain (Netlify, Cloudflare Pages) juga bisa: build command `npm run build`, output `dist`.
